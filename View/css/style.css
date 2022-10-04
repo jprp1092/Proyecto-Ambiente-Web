@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url(font-awesome.min.css);
+
+/* 1. Colores hexadecimales
+----------------------------------------------- */
+.My-Color-Theme-1-hex {
+    color: #00395C;
+}
+
+.My-Color-Theme-2-hex {
+    color: #00609C;
+}
+
+.My-Color-Theme-3-hex {
+    color: #0078C2;
+}
+
+.My-Color-Theme-4-hex {
+    color: #0087DB;
+}
+
+.My-Color-Theme-5-hex {
+    color: #008FE8;
+}
+
+/* 2. General Styles
+--------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.side-bar {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 25%;
+    background-color: #00416a;
+}
+
+.content {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    height: 100%;
+    width: 80%;
+    background-color: rgb(0, 42, 68);
+    overflow: auto;
+}
+
+.logo img{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.logo h1{
+    position: relative;
+    top: -80px;
+    width: 100px;
+    margin-left: 45%;
+    font-size: 24px;
+}
+
+.icon-profile{
+    position: relative;
+    top: -10px;
+    margin-left: 10%;
+    background-color: #ffffff;
+    border: 3px solid rgb(0, 42, 68);
+    padding: 10px 10px;
+    border-radius: 100%;
+}
+
+.icon-profile i{
+    color: #00395C;
+    position: relative;
+    font-size: 30px;
+    top: 4px;
+}
+
+.signOut{
+    position: relative;
+    top: -20px;
+    margin-left: 56%;
+}
+
+
+.userName{
+    position: relative;
+    font-size: 20px;
+    top: 15px;
+    margin-left: 10%;
+}
+
+.menu{
+    position: relative;
+    top: 60px;
+}
+
+.menu li{
+    padding: 24px 0px;
+}
+
+.menu li:hover{
+    background-color: rgb(0, 70, 113);
+    color: rgb(77, 178, 240);
+}
+
+
+.menu a{
+    margin-left: 36px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color: rgb(77, 178, 240);
+}
