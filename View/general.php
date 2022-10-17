@@ -2,7 +2,7 @@
 
 function headerLogin()
 {
-  echo '<title>Título</title>
+  echo '<title>Iniciar Sesión</title>
           <meta name="keywords" content="" />
           <meta name="description" content="" />
           <meta charset="UTF-8">
@@ -41,18 +41,16 @@ function menu()
           </div>
 
           <div class="menu">
-					<ul>
-					  <li><a href="#">Inicio</a></li>
-					  <li></i><a href="#">Matrícula</a></li>
-					  <li><a href="#">Usuarios</a></li>
-            <li><a href="#">Administrativos</a></li>
-					  <li><a href="#">Docentes</a></li>
-					  <li><a href="#">Alumnos</a></li>
-            <li><a href="#">Carreras</a></li>
-					  <li><a href="#">Asignaturas</a></li>
-					  <li><a href="#">Grupos</a></li>
-					  <li><a href="#">Asistencias</a></li>
-					</ul>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li></i><a href="#">Matrícula</a></li>
+              <li><a href="#">Docentes</a></li>
+              <li><a href="#">Alumnos</a></li>
+              <li><a href="#">Carreras</a></li>
+              <li><a href="#">Asignaturas</a></li>
+              <li><a href="#">Grupos</a></li>
+              <li><a href="#">Asistencias</a></li>
+            </ul>
           </div>
 			  </section>';
 }

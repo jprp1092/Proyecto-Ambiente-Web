@@ -1,5 +1,6 @@
 <?php
-include 'View/general.php';
+    include_once 'View/general.php';
+    include_once 'Controller/UsuariosController.php';
 ?>
 
 <!doctype html>
@@ -12,7 +13,6 @@ include 'View/general.php';
 </head>
 
 <body>
-    <section id="content">
         <div class="container" style="margin-top: 100px">
             <div class="row">
                 <div class="col-md-5 mx-auto">
@@ -20,14 +20,14 @@ include 'View/general.php';
                         <div class="card-body">
                         <a id="profile"><i class="fa fa-user"></i></a>
                         <h4>Iniciar Sesión</h4>
-                            <form role="form" action="View/home.php" method="post">
+                            <form role="form" role="form" action="" method="POST">
                                 <div class="row">
                                     <div class="form-group">
                                         <div class="row">
                                             <label for="txtMail" class="control-label"></label>
                                             <div class="input-icon-container">
                                                 <i class="fa fa-user"></i>
-                                                <input type="text" class="form-control" id="txtMail" name="txtMail" placeholder="Correo electrónico o matrícula">
+                                                <input type="text" class="form-control" id="txtCedula" name="txtCedula" placeholder="Cedula">
                                             </div>
                                         </div>
                                     </div>
@@ -41,7 +41,10 @@ include 'View/general.php';
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" value="Ingresar" name="btnIngresar" class="btnIngreso">
+                                        <input type="submit" value="Ingresar" id="btnIngresar" name="btnIngresar" class="btnIngreso">
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="registrarse.php" id="btnRegistro" name="btnRegistro" class="">Registrate</a>
                                     </div>
                                 </div>
                             </form>
@@ -50,7 +53,6 @@ include 'View/general.php';
                 </div>
             </div>
         </div>
-    </section>
 </body>
 
 </html>

@@ -47,9 +47,9 @@
 .content {
     position: absolute;
     top: 0%;
-    left: 25%;
+    left: 20%;
     height: 100%;
-    width: 80%;
+    width: 60%;
     background-color: rgb(0, 42, 68);
     overflow: auto;
 }
