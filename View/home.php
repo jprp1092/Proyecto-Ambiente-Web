@@ -1,19 +1,29 @@
 <?php
-include 'general.php';
+
+include_once __DIR__ . '\general.php';
+include_once __DIR__ . '\..\Controller\RolController.php';
 ?>
 
 <!DOCTYPE html>
 
     <head>
         <?php
-            headerSite();
+           
+           headerSite();
+
         ?>
     </head>
 
     <body>
         <?php
+        
             menu();
+            CargarRol();
+       
+            
+                      
         ?>
+
         <div class="content">
         </div>
         <script src="../View/js/jquery.min.js"></script>

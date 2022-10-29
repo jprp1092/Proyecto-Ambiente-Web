@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+
+
 function headerLogin()
 {
   echo '<title>Iniciar Sesión</title>
@@ -37,7 +41,7 @@ function menu()
           <div class="user">
           <a class="icon-profile"><i class="fa fa-user"></i></a>
           <a class="signOut" href="/login.php"><i class="fa fa-sign-out"></i></a>
-          <a class="userName">Bernardo Céspedes Martínez</a>
+          <a class="userName"> <?php echo $_SESSION["sesionNombre"]; ?> </a>
           </div>
 
           <div class="menu">

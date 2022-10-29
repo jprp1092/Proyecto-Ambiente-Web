@@ -1,6 +1,6 @@
 <?php
-    include_once 'View/general.php';
-    include_once 'Controller/UsuariosController.php';
+    include_once __DIR__ . '/View/general.php';
+    include_once __DIR__ .'/Controller/UsuariosController.php';
 ?>
 
 <!doctype html>

@@ -1,10 +1,10 @@
 <?php
-include_once 'ConnDB.php';
+include_once __DIR__ . '\ConnDB.php';
 
-function ValidarCredenciales($cedula, $contrasenna)
+function ValidarCredenciales($cedula, $contrasena)
 {
     $enlace = OpenDB();
-    $procedimiento = "CALL validar_credenciales('$cedula', '$contrasenna');";
+    $procedimiento = "CALL ValidarCredenciales('$cedula', '$contrasena');";
     $datosUsuario = $enlace -> query($procedimiento);
 
     CloseDB($enlace);
