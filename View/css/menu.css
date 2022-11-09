@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/* 1. Colores hexadecimales
+----------------------------------------------- */
+.My-Color-Theme-1-hex { color: #00395C; }
+.My-Color-Theme-2-hex { color: #00609C; }
+.My-Color-Theme-3-hex { color: #0078C2; }
+.My-Color-Theme-4-hex { color: #0087DB; }
+.My-Color-Theme-5-hex { color: #008FE8; }
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.sideBar {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 25%;
+    background-color: #00416a;
+}
+
+.content {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    height: 100%;
+    width: 75%;
+    background-color: rgb(0, 42, 68);
+    overflow: auto;
+}
+
+.sideBar .logo img{
+    position: relative;
+    top: 24px;
+    left: 12%;
+}
+
+.sideBar .logo h1,
+.sideBar .logo h2{
+    position: relative;
+    top: -50px;
+    width: 100px;
+}
+
+.sideBar .logo h1{
+    font-size: 22px;
+    left: 47%;
+}
+
+.sideBar .logo h2{
+    font-size: 20px;
+    left: 46%;
+}
+
+.sideBar .icon-profile{
+    position: relative;
+    top: 30px;
+    left: 12%;
+    background-color: #ffffff;
+    border: 3px solid rgb(0, 42, 68);
+    padding: 10px 10px;
+    border-radius: 100%;
+}
+
+.sideBar .icon-profile i{
+    color: #00395C;
+    position: relative;
+    font-size: 30px;
+    top: 4px;
+}
+
+.sideBar .signOut{
+    position: relative;
+    top: 18px;
+    left: 60%;
+}
+
+.sideBar .userName{
+    position: absolute;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 95px;
+    left: 12%;
+    color: white;
+}
+
+.sideBar .menu{
+    position: relative;
+    top: 140px;
+}
+
+.sideBar .menu li{
+    position: relative;
+    padding: 24px 0px;
+    margin-left: -40px;
+    list-style: none;
+}
+
+.sideBar .menu li:hover{
+    background-color: rgb(0, 70, 113);
+    color: rgb(77, 178, 240);
+}
+
+.sideBar .menu i{
+    position: relative;
+    left: 12%;
+}
+
+.sideBar .menu a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 20%;
+    font-size: 18px;
+}
+
+.sideBar .menu a:hover{
+    color: rgb(77, 178, 240);
+}
+
+.btnPresionar{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #00609C;
+    color: #ffffff;
+    border: none;
+}

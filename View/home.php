@@ -1,33 +1,27 @@
 <?php
 
+if (session_status() == PHP_SESSION_NONE)
+    session_start();
+
 include_once __DIR__ . '\general.php';
-include_once __DIR__ . '\..\Controller\RolController.php';
+include_once __DIR__ . '\..\Controller\PantallasController.php';
 ?>
 
 <!DOCTYPE html>
 
-    <head>
-        <?php
-           
-           headerSite();
+<head>
+    <?php
+    headerSite();
+    ?>
+</head>
 
-        ?>
-    </head>
+<body>
+    <?php
+    CargarMenu();
+    ?>
 
-    <body>
-        <?php
-        
-            menu();
-            CargarRol();
-       
-            
-                      
-        ?>
-
-        <div class="content">
-        </div>
-        <script src="../View/js/jquery.min.js"></script>
-        <script src="../View/js/bootstrap.min.js"></script>
-    </body>
+    <div class="content">
+    </div>
+</body>
 
 </html>
