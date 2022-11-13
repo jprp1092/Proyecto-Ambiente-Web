@@ -2,7 +2,7 @@
 
  function headerSite()
  {
-   echo '<title>Título</title>
+   echo '<title>Sistema Academico</title>
            <meta name="keywords" content="" />
            <meta name="description" content="" />
            <meta charset="UTF-8">

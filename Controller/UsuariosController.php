@@ -27,6 +27,24 @@ if(isset($_POST["btnIngresar"]))
     }
 }
 
+function VerRolesController($rol)
+{
+    $datos = VerRolesModel();   
+
+    if($datos -> num_rows > 0)
+    {
+        echo '<option selected value=""> Seleccione... </option>';
+
+        while($fila = mysqli_fetch_array($datos))
+        {
+            if($rol == $fila["idRol"])
+                echo '<option selected value="' . $fila["idRol"] . '">' . $fila["descripcion"] . '</option>';
+            else
+                echo '<option value="' . $fila["idRol"] . '">' . $fila["descripcion"] . '</option>';
+        }
+    }
+}
+
 function CargarUsuarios()
 {
     $datosUsuarios = ListarUsuarios();
@@ -44,6 +62,28 @@ function CargarUsuarios()
             echo "</tr>";
         }
     }
+}
+
+if(isset($_POST["btnAgregar"]))
+{ 
+    $Cedula = $_POST["txtIdentificacion"];
+    $Nombre = $_POST["txtNombre"];
+    $Apellido = $_POST["txtApellido"];
+    $FechaNacimiento = $_POST["txtFechaNacimiento"];
+    $Contrasenna = $_POST["txtContraseña"];
+    $Contrasenna2 = $_POST["txtConfirmarContraseña"];
+    $Direccion = $_POST["txtDireccion"];
+    $Telefono = $_POST["txtTelefono"];
+    $Correo = $_POST["txtEmail"];
+    $Rol = $_POST["cboTipoUsuario"];
+    $Estado = $_POST["cboEstado"];
+
+    if ($Contrasenna === $Contrasenna2) {
+        AgregarUsuario($Cedula,$Nombre,$Apellido,$FechaNacimiento,$Contrasenna,$Direccion,$Telefono,$Correo,$Rol,$Estado);
+        header("Location: Usuarios.php");
+    }else{
+        alert("Las contraseñas no coinciden");
+    }      
 }
 
 ?>

@@ -135,3 +135,10 @@
     color: #ffffff;
     border: none;
 }
+
+/*Cambio de color de hover en la tabla (poner mouse encima)*/
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th{
+    background-color: #2E5F7E;
+    color: white;
+}
+/*Fin Cambio de color de hover en la tabla (poner mouse encima)*/

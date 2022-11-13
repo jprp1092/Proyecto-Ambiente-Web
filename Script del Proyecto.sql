@@ -1,4 +1,4 @@
-
+use sistemaacademico;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -33,8 +33,7 @@ CREATE TABLE IF NOT EXISTS `sistemaacademico`.`usuarios`
   `fechaNacimiento` DATE NOT NULL, 
   `direccion` VARCHAR(500) NOT NULL, 
   `telefono` VARCHAR(45) NOT NULL, 
-  `correo` VARCHAR(50) NOT NULL, 
-  `carrera` VARCHAR(45) NOT NULL, 
+  `correo` VARCHAR(50) NOT NULL,  
   `tipoRol` INT(11) NOT NULL, 
   `estado` INT(1) NOT NULL, 
   PRIMARY KEY (`idUsuario`), 
@@ -277,8 +276,7 @@ INSERT INTO `sistemaacademico`.`usuarios`
   `fechaNacimiento`, 
   `direccion`, 
   `telefono`, 
-  `correo`, 
-  `carrera`, 
+  `correo`,  
   `tipoRol`, 
   `estado`
 ) 
@@ -292,7 +290,6 @@ INSERT INTO `sistemaacademico`.`usuarios`
   'Heredia', 
   '93845372', 
   'alonsorojas@gmail.com', 
-  'Sistemas', 
   1, 
   1
 ),
@@ -304,8 +301,7 @@ INSERT INTO `sistemaacademico`.`usuarios`
   '1994-04-08', 
   'Alajuela', 
   '47338943', 
-  'erickfonseca@gmail.com', 
-  'Sistemas', 
+  'erickfonseca@gmail.com',  
   2, 
   1
 ),
@@ -317,8 +313,7 @@ INSERT INTO `sistemaacademico`.`usuarios`
   '2004-03-03', 
   'Cartago', 
   '35968354', 
-  'amandaflores@gmail.com', 
-  'Sistemas', 
+  'amandaflores@gmail.com',  
   3, 
   1
 );
