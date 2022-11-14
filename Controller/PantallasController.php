@@ -4,6 +4,7 @@ if (session_status() == PHP_SESSION_NONE)
     session_start();
 
 include_once __DIR__ . '\..\Model\PantallasModel.php';
+include_once __DIR__ . '\UtilitariosController.php';
 
 function CargarMenu()
 {
@@ -23,7 +24,6 @@ function CargarMenu()
         
         <div>
             <a class="icon-profile"><i class="fa fa-user"></i></a>
-            <a class="signOut" href="/index.php"><i class="fa fa-sign-out"></i></a>
             <a class="userName">', $_SESSION["sessionNombre"], '</a>
         </div>
         
@@ -45,8 +45,11 @@ function CargarMenu()
         }
         
         echo
-        
-           '</ul>
+           '<li>
+                <i class="fa fa-sign-out"></i>
+                <a href="" data-toggle="modal" data-target="#confirmModal" data-backdrop="static" data-keyboard="false">Cerrar Sesión</a>
+            </li>
+           </ul>
           </div>
         </section>';
     }

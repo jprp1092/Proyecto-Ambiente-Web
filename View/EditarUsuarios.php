@@ -26,7 +26,7 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
 
     <div class="content">
         <div class="templatemo-panels">
-
+            
             <br /><br />
 
             <div class="row">
@@ -81,8 +81,6 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
                     <a href="Usuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                 </div>
             </div>
-
-
         </div>
     </div>
 </body>

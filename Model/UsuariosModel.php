@@ -43,6 +43,13 @@ function AgregarUsuario($Cedula,$Nombre,$Apellido,$Contrasenna,$FechaNacimiento,
 
 /*Fin funcion para agregar usuarios nuevos*/
 
+/* Funcion ver opciones de menu segun rol */
+
+
+
+/* Fin funcion ver opciones de menu segun rol */
+
+
 /*Funcion para poder ver lo roles en la creacion de usuarios*/
 
 function VerRolesModel()

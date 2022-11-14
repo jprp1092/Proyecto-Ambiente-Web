@@ -21,7 +21,16 @@ include_once __DIR__ . '\..\Controller\PantallasController.php';
     ?>
 
     <div class="content">
+    
     </div>
-</body>
 
+    <?php 
+        modal();
+    ?>
+
+    <?php 
+        footerSite();
+    ?>
+
+</body>
 </html>

@@ -28,7 +28,6 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
         <div class="templatemo-panels">
 
             <br /><br />
-
             <form class="form-horizontal templatemo-login-form-2" role="form" action="" method="post">
                 <div class="row">
                     <div class="col-md-1">
