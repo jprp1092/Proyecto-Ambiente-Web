@@ -16,12 +16,29 @@ function CargarCursos()
             echo "<tr>";
             echo "<td>" . $resultado["nombre"] . "</td>";
             echo "<td>" . $resultado["modalidad"] . "</td>";
-            echo "<td>" . $resultado["naturaleza"] . "</td>";
+            echo "<td>" . $resultado["horario"] . "</td>";
             echo "<td>" . $resultado["creditos"] . "</td>";
-            echo "<td>" . $resultado["asistencia"] . "</td>";
-            echo "<td>" . $resultado["duracion"] . "</td>";
+            echo "<td>" . $resultado["nombreProfesor"] . '  ' . $resultado["apellidoProfesor"] . "</td>";
             echo '<td><a href="EditarCursos.php" class="btnPresionar">Editar</a></td>';
             echo "</tr>";
+        }
+    }
+}
+
+function ListarProfesoresController($idUsuario) {
+    
+    $datos = ListarProfesoresModel();
+
+    if($datos -> num_rows > 0)
+    {
+        echo '<option selected value=""> Seleccione Profesor... </option>';
+
+        while($fila = mysqli_fetch_array($datos))
+        {
+            if($idUsuario == $fila["idUsuario"])
+                echo '<option selected value="' . $fila["idUsuario"] . '">' . $fila["nombreProfe"] . ' ' . $fila["apellidoProfe"] .  '</option>';
+            else
+                echo '<option value="' . $fila["idUsuario"] . '">' . $fila["nombreProfe"] . ' ' . $fila["apellidoProfe"] .  '</option>';
         }
     }
 }
@@ -29,13 +46,12 @@ function CargarCursos()
 if(isset($_POST["btnAgregarCurso"]))
 { 
     $Nombre = $_POST["txtNombre"];
-    $Modalidad = $_POST["txtModalidad"];
-    $Naturaleza = $_POST["txtNaturaleza"];
+    $Modalidad = $_POST["cboModalidad"];
+    $Horario = $_POST["cboHorario"];
     $Creditos = $_POST["txtCreditos"];
-    $Asistencia = $_POST["txtAsistencia"];
-    $Duracion = $_POST["txtDuracion"];
+    $Profesor = $_POST["cboProfesor"];
 
-    AgregarCurso($Nombre,$Modalidad,$Naturaleza,$Creditos,$Asistencia,$Duracion);
+    AgregarCurso($Nombre,$Modalidad,$Horario,$Creditos,$Profesor);
     header("Location: Cursos.php");
 }
 

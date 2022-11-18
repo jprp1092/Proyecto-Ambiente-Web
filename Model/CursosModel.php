@@ -9,13 +9,23 @@ function ListarCursos()
 
     CloseDB($enlace);
     return $datosCursos;
-}    
+}
 
-function AgregarCurso($Nombre,$Modalidad,$Naturaleza,$Creditos,$Asistencia,$Duracion)
+function ListarProfesoresModel() {
+    $enlace = OpenDB();
+
+    $procedimiento = "call ListarProfesores();";
+    $datos = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datos;
+}
+
+function AgregarCurso($Nombre,$Modalidad,$Horario,$Creditos,$Docente)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "call AgregarUsuario('$Nombre','$Modalidad','$Naturaleza','$Creditos','$Asistencia','$Duracion');";
+    $procedimiento = "call AgregarCurso('$Nombre','$Modalidad','$Horario','$Creditos','$Docente');";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);

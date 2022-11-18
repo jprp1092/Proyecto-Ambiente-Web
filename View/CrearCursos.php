@@ -33,18 +33,26 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-3">
-                        <label for="lblNombre" class="control-label">Nombre</label>
+                        <label for="lblNombre" class="control-label">Nombre Materia</label>
                         <input type="text" class="form-control" id="txtNombre" name="txtNombre">
                     </div>
 
                     <div class="col-md-3">
                         <label for="lblModalidad" class="control-label">Modalidad</label>
-                        <input type="text" class="form-control" id="txtModalidad" name="txtModalidad">
+                        <select class="form-control" name="cboModalidad" id="cboModalidad" required>
+                            <option value="Virtual">Presencial</option>
+                            <option value="Presencial">Virtual</option>
+                        </select>
+
                     </div>
 
                     <div class="col-md-3">
-                        <label for="lblNaturaleza" class="control-label">Naturaleza</label>
-                        <input type="text" class="form-control" id="txtNaturaleza" name="txtNaturaleza">
+                        <label for="lblHorario" class="control-label">Horario</label>
+                        <select class="form-control" name="cboHorario" id="cboHorario" required>
+                            <option value="Manaña">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noche">Noche</option>
+                        </select>
                     </div>
                 </div>
 
@@ -58,21 +66,21 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                         <input type="text" class="form-control" id="txtCreditos" name="txtCreditos">
                     </div>
 
-                    <div class="col-md-3">
-                        <label for="lblAsistencia" class="control-label">Asistencia</label>
-                        <input type="password" class="form-control" id="txtAsistencia" name="txtAsistencia">
+                    <div class="col-md-3 margin-bottom-15">
+                        <label for="lblProfesor" class="control-label">Profesor</label>
+                        <select class="form-control" id="cboProfesor" name="cboProfesor" required>
+                                <?php 
+                                ListarProfesoresController($datos["idUsuario"]); 
+                                ?>
+                        </select>
                     </div>
 
-                    <div class="col-md-3">
-                        <label for="lblDuracion" class="control-label">Duracion</label>
-                        <input type="password" class="form-control" id="txtDuracion" name="txtDuracion">
-                    </div>
                 </div>
                 <br />
 
                 <div class="row">
                     <div class="col">
-                        <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregarCurso" name="btnAgregarCurso">
+                        <input type="submit" class="btn btn-info" value="Agregar curso" id="btnAgregarCurso" name="btnAgregarCurso">
                         <a href="Cursos.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                     </div>
                 </div>
