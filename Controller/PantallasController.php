@@ -47,7 +47,7 @@ function CargarMenu()
         echo
            '<li>
                 <i class="fa fa-sign-out"></i>
-                <a href="" data-toggle="modal" data-target="#confirmModal" data-backdrop="static" data-keyboard="false">Cerrar Sesión</a>
+                <a href="../index.php" data-toggle="modal" data-target="#confirmModal" data-backdrop="static" data-keyboard="false">Cerrar Sesión</a>
             </li>
            </ul>
           </div>

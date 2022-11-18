@@ -82,8 +82,8 @@ if(isset($_POST["btnAgregar"]))
         AgregarUsuario($Cedula,$Nombre,$Apellido,$FechaNacimiento,$Contrasenna,$Direccion,$Telefono,$Correo,$Rol,$Estado);
         header("Location: Usuarios.php");
     }else{
-        alert("Las contraseñas no coinciden");
-    }      
+        header("Location: CrearUsuarios.php");
+    }
 }
 
 ?>
