@@ -57,3 +57,5 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
 </body>
 
 </html>
+
+<script src="../View/js/login.js"></script>';

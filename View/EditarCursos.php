@@ -6,6 +6,10 @@ if (session_status() == PHP_SESSION_NONE)
 include_once __DIR__ . '\general.php';
 include_once __DIR__ . '\..\Controller\PantallasController.php';
 include_once __DIR__ . '\..\Controller\CursosController.php';
+
+
+
+
 ?>
 
 <!DOCTYPE html>

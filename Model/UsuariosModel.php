@@ -64,4 +64,23 @@ function VerRolesModel()
 
 /*Fin funcion para poder ver lo roles en la creacion de usuarios*/
 
+function ConsultarDatosUsuarioModel($id)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "call ConsultarUsuarioId($id);";
+    $datos = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datos;
+}
+
+function ActualizarUsuarioModel($Nombre,$Apellido, $Contrasenna,$Telefono, $Direccion, $Rol,$id)
+{
+    $enlace = OpenDB();
+    $procedimiento = "call ActualizarUsuario('$Nombre','$Apellido', '$Contrasenna','$Telefono', '$Direccion', $Rol,$id);";
+    $enlace -> query($procedimiento);
+    CloseDB($enlace);
+}
+
 ?>

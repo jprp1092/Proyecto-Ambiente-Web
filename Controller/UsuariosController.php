@@ -45,6 +45,12 @@ function VerRolesController($rol)
     }
 }
 
+function ConsultarDatosUsuario($id)
+{
+    $datos = ConsultarDatosUsuarioModel($id);   
+    return mysqli_fetch_array($datos);
+}
+
 function CargarUsuarios()
 {
     $datosUsuarios = ListarUsuarios();
@@ -58,7 +64,7 @@ function CargarUsuarios()
             echo "<td>" . $resultado["nombre"] . "</td>";
             echo "<td>" . $resultado["descripcion"] . "</td>";
             echo "<td>" . $resultado["descripcionEstado"] . "</td>";
-            echo '<td><a href="EditarUsuarios.php" class="btnPresionar">Editar</a></td>';
+            echo '<td> <a class="btnPresionar"  href="EditarUsuarios.php?q=' . $resultado["idUsuario"] . '">Editar</a></td>';     
             echo "</tr>";
         }
     }
@@ -86,4 +92,20 @@ if(isset($_POST["btnAgregar"]))
     }
 }
 
+if(isset($_POST["btnActualizar"]))
+{
+    $Nombre = $_POST["txtNombre"];
+    $Apellido = $_POST["txtApellido"];
+    $Contrasenna = $_POST["txtContraseña"];
+    $Telefono = $_POST["txtTelefono"];
+    $Direccion = $_POST["txtDireccion"];
+    $Rol = $_POST["cboTipoUsuario"];
+    $id = $_POST["txtId"];
+
+    ActualizarUsuarioModel($Cedula,$Nombre,$Apellido, $Contrasenna, $Telefono, $Direccion, $Rol,$id); 
+    header("Location: Usuarios.php");  
+}
+
 ?>
+
+
