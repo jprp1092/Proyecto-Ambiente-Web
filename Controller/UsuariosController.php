@@ -96,13 +96,14 @@ if(isset($_POST["btnActualizar"]))
 {
     $Nombre = $_POST["txtNombre"];
     $Apellido = $_POST["txtApellido"];
-    $Contrasenna = $_POST["txtContraseña"];
+    $Contrasenna = $_POST["txtContrasenna"];
     $Telefono = $_POST["txtTelefono"];
     $Direccion = $_POST["txtDireccion"];
     $Rol = $_POST["cboTipoUsuario"];
     $id = $_POST["txtId"];
+    $estado = $_POST["cboEstado"];
 
-    ActualizarUsuarioModel($Cedula,$Nombre,$Apellido, $Contrasenna, $Telefono, $Direccion, $Rol,$id); 
+    ActualizarUsuarioModel($Nombre,$Apellido, $Contrasenna, $Telefono, $Direccion, $Rol,$id,$estado); 
     header("Location: Usuarios.php");  
 }
 

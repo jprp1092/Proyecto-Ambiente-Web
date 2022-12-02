@@ -75,10 +75,10 @@ function ConsultarDatosUsuarioModel($id)
     return $datos;
 }
 
-function ActualizarUsuarioModel($Nombre,$Apellido, $Contrasenna,$Telefono, $Direccion, $Rol,$id)
+function ActualizarUsuarioModel($Nombre,$Apellido, $Contrasenna,$Telefono, $Direccion, $Rol,$id,$estado)
 {
     $enlace = OpenDB();
-    $procedimiento = "call ActualizarUsuario('$Nombre','$Apellido', '$Contrasenna','$Telefono', '$Direccion', $Rol,$id);";
+    $procedimiento = "call ActualizarUsuario('$Nombre','$Apellido', '$Contrasenna','$Telefono', '$Direccion','$Rol',$id,$estado);";
     $enlace -> query($procedimiento);
     CloseDB($enlace);
 }

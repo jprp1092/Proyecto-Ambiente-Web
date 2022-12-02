@@ -51,11 +51,33 @@ $datos = ConsultarDatosUsuario($_GET["q"]);
                     <input type="text" class="form-control" id="txtNombre" name="txtNombre"required
                         value="<?php echo $datos["nombre"] ?>">
                 </div>
+              
+                <div class="col-md-3">
+                    <label for="lblApellido" class="control-label">Apellido</label>
+                    <input type="text" class="form-control" id="txtApellido" name="txtApellido"required
+                        value="<?php echo $datos["apellido"] ?>">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="lblTelefono" class="control-label">Telefono</label>
+                    <input type="text" class="form-control" id="txtTelefono" name="txtTelefono"required
+                        value="<?php echo $datos["telefono"] ?>">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="lblDireccion" class="control-label">Direccion</label>
+                    <input type="text" class="form-control" id="txtDireccion" name="txtDireccion"required
+                        value="<?php echo $datos["direccion"] ?>">
+                </div>
+
+                
 
                 <div class="col-md-3">
                     <label for="lblEstado" class="control-label">Estado</label>
-                    <input type="text" class="form-control" id="txtEstado" name="txtEstado">
-
+                            <select class="form-control" id="cboEstado" name="cboEstado" required>
+                                <option value=1>Activo</option>
+                                <option value=0>Inactivo</option>
+                            </select>
                     
                 </div>
             </div>
@@ -68,7 +90,7 @@ $datos = ConsultarDatosUsuario($_GET["q"]);
                 <div class="col-md-3">
 
                     <label for="lblTipoUsuario" class="control-label">Tipo de Usuario</label>
-                        <select class="form-control" id="txtTipoUsuario" name="txtTipoUsuario" required>
+                        <select class="form-control" id="cboTipoUsuario" name="txtTipoUsuario" required>
                                 <?php 
                                 VerRolesController($datos["idRol"]); 
                                 ?>

@@ -65,7 +65,8 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
 
                     <div class="col-md-3">
                         <label for="lblConfirmarContrasenna" class="control-label">Confirmar contraseña</label>
-                        <input type="password" class="form-control" id="txtConfirmarContraseña" name="txtConfirmarContraseña">
+                        <input type="password" class="form-control" id="txtConfirmarContraseña"
+                            name="txtConfirmarContraseña">
                     </div>
                 </div>
 
@@ -99,18 +100,18 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
                     <div class="col-md-3">
                         <label for="lblRol" class="control-label">Rol de Usuario</label>
                         <select class="form-control" id="cboTipoUsuario" name="cboTipoUsuario" required>
-                                <?php 
+                            <?php 
                                 VerRolesController($datos["idRol"]); 
                                 ?>
                         </select>
                     </div>
 
                     <div class="col-md-3 margin-bottom-15">
-                            <label for="lblEstado" class="control-label">Estado</label>
-                            <select class="form-control" id="cboEstado" name="cboEstado" required>
-                                <option value=1>Activo</option>
-                                <option value=0>Inactivo</option>
-                            </select>
+                        <label for="lblEstado" class="control-label">Estado</label>
+                        <select class="form-control" id="cboEstado" name="cboEstado" required>
+                            <option value=1>Activo</option>
+                            <option value=0>Inactivo</option>
+                        </select>
                     </div>
                 </div>
                 <br />

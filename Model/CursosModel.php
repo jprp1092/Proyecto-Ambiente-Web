@@ -14,7 +14,7 @@ function ListarCursos()
 function ListarProfesoresModel() {
     $enlace = OpenDB();
 
-    $procedimiento = "call ListarProfesores();";
+    $procedimiento = "call ListarProfesor();";
     $datos = $enlace -> query($procedimiento);
 
     CloseDB($enlace);
@@ -29,4 +29,26 @@ function AgregarCurso($Nombre,$Modalidad,$Horario,$Creditos,$Docente)
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);
+}
+
+function ConsultaCursoModel($id)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "call consultarCursoId($id);";
+    $datos = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datos;
+}
+
+function ActualizarCursoModel($Nombre,$Modalidad, $Horario, $Creditos, $Docentes,$id)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "call ActualizarCursos('$Nombre','$Modalidad','$Horario', $Creditos,$Docentes,$id);";
+    $datos = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datos;
 }

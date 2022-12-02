@@ -68,7 +68,7 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
 
                     <div class="col-md-3 margin-bottom-15">
                         <label for="lblProfesor" class="control-label">Profesor</label>
-                        <select class="form-control" id="cboProfesor" name="cboProfesor" required>
+                        <select class="form-control" id="cboProfesor" name="cboProfesor" required>                       
                                 <?php 
                                 ListarProfesoresController($datos["idUsuario"]); 
                                 ?>

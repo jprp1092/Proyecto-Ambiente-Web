@@ -18,8 +18,8 @@ function CargarCursos()
             echo "<td>" . $resultado["modalidad"] . "</td>";
             echo "<td>" . $resultado["horario"] . "</td>";
             echo "<td>" . $resultado["creditos"] . "</td>";
-            echo "<td>" . $resultado["nombreProfesor"] . '  ' . $resultado["apellidoProfesor"] . "</td>";
-            echo '<td><a href="EditarCursos.php" class="btnPresionar">Editar</a></td>';
+            echo "<td>" . $resultado["nombreProfe"] . '  ' . $resultado["apellidoProfe"] . "</td>";
+            echo '<td> <a class="btnPresionar"  href="EditarCursos.php?q=' . $resultado["idCurso"] . '">Editar</a></td>';        
             echo "</tr>";
         }
     }
@@ -31,15 +31,15 @@ function ListarProfesoresController($idUsuario) {
 
     if($datos -> num_rows > 0)
     {
-        echo '<option selected value=""> Seleccione Profesor... </option>';
-
+        echo '<option selected value=""> Seleccione Profesor... </option>';      
         while($fila = mysqli_fetch_array($datos))
         {
             if($idUsuario == $fila["idUsuario"])
-                echo '<option selected value="' . $fila["idUsuario"] . '">' . $fila["nombreProfe"] . ' ' . $fila["apellidoProfe"] .  '</option>';
+                echo '<option selected value="' . $fila["idUsuario"] . '">' . $fila["nombre"] . ' ' . $fila["apellido"] .  '</option>';
             else
-                echo '<option value="' . $fila["idUsuario"] . '">' . $fila["nombreProfe"] . ' ' . $fila["apellidoProfe"] .  '</option>';
+                echo '<option value="' . $fila["idUsuario"] . '">' . $fila["nombre"] . ' ' . $fila["apellido"] .  '</option>';
         }
+        
     }
 }
 
@@ -55,5 +55,28 @@ if(isset($_POST["btnAgregarCurso"]))
     header("Location: Cursos.php");
 }
 
+
+
+function consultarCursoId($id)
+{
+    $datos = ConsultaCursoModel($id);   
+    return mysqli_fetch_array($datos);
+}
+
+
+if(isset($_POST["btnActualizar"]))
+{
+
+    $Nombre = $_POST["txtNombre"];
+    $Modalidad = $_POST["cboModalidad"];
+    $Horario = $_POST["cboHorario"];
+    $Creditos = $_POST["txtCreditos"];
+    $Docentes = $_POST["cboProfesor"];
+    $id = $_POST["txtId"];
+   
+
+    ActualizarCursoModel($Nombre,$Modalidad, $Horario, $Creditos, $Docentes,$id); 
+    header("Location: Cursos.php");  
+}
 
 ?>
