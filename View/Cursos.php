@@ -51,7 +51,7 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                         </div>
                     </div>
                 </div>
-                <a href="CrearCursos.php" class="btnPresionar">Agregar</a>
+                <a href="CrearCurso.php" class="btnPresionar">Agregar</a>
             </div>
         </div>
     </div>

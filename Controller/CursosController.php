@@ -14,18 +14,18 @@ function CargarCursos()
         while($resultado = mysqli_fetch_array($datosCursos))
         {
             echo "<tr>";
-            echo "<td>" . $resultado["nombre"] . "</td>";
+            echo "<td>" . $resultado["nombreCurso"] . "</td>";
             echo "<td>" . $resultado["modalidad"] . "</td>";
             echo "<td>" . $resultado["horario"] . "</td>";
             echo "<td>" . $resultado["creditos"] . "</td>";
-            echo "<td>" . $resultado["nombreProfe"] . '  ' . $resultado["apellidoProfe"] . "</td>";
+            echo "<td>" . $resultado["nombreProfesor"] . '  ' . $resultado["apellidoProfesor"] . "</td>";
             echo '<td> <a class="btnPresionar"  href="EditarCursos.php?q=' . $resultado["idCurso"] . '">Editar</a></td>';        
             echo "</tr>";
         }
     }
 }
 
-function ListarProfesoresController($idUsuario) {
+function ListarProfesoresController($CedulaUsuario) {
     
     $datos = ListarProfesoresModel();
 
@@ -34,10 +34,10 @@ function ListarProfesoresController($idUsuario) {
         echo '<option selected value=""> Seleccione Profesor... </option>';      
         while($fila = mysqli_fetch_array($datos))
         {
-            if($idUsuario == $fila["idUsuario"])
-                echo '<option selected value="' . $fila["idUsuario"] . '">' . $fila["nombre"] . ' ' . $fila["apellido"] .  '</option>';
+            if($CedulaUsuario == $fila["cedula"])
+                echo '<option selected value="' . $fila["cedula"] . '">' . $fila["nombre"] . ' ' . $fila["apellido"] .  '</option>';
             else
-                echo '<option value="' . $fila["idUsuario"] . '">' . $fila["nombre"] . ' ' . $fila["apellido"] .  '</option>';
+                echo '<option value="' . $fila["cedula"] . '">' . $fila["nombre"] . ' ' . $fila["apellido"] .  '</option>';
         }
         
     }

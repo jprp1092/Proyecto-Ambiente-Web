@@ -45,9 +45,9 @@ function VerRolesController($rol)
     }
 }
 
-function ConsultarDatosUsuario($id)
+function ConsultarDatosUsuario($Cedula)
 {
-    $datos = ConsultarDatosUsuarioModel($id);   
+    $datos = ConsultarDatosUsuarioModel($Cedula);   
     return mysqli_fetch_array($datos);
 }
 
@@ -64,7 +64,7 @@ function CargarUsuarios()
             echo "<td>" . $resultado["nombre"] . "</td>";
             echo "<td>" . $resultado["descripcion"] . "</td>";
             echo "<td>" . $resultado["descripcionEstado"] . "</td>";
-            echo '<td> <a class="btnPresionar"  href="EditarUsuarios.php?q=' . $resultado["idUsuario"] . '">Editar</a></td>';     
+            echo '<td> <a class="btnPresionar"  href="EditarUsuarios.php?q=' . $resultado["cedula"] . '">Editar</a></td>';     
             echo "</tr>";
         }
     }
@@ -103,10 +103,10 @@ if(isset($_POST["btnActualizar"]))
     $TipoUsuario = $_POST["cboTipoUsuario"];
     $Contrasenna = $_POST["txtContrasenna"];
     $ContrasennaConfirmar = $_POST["txtConfirmarContraseña"];
-    $IdUsuario = $_POST["txtId"];
+    $Cedula = $_POST["txtCedula"];
 
     if ($Contrasenna === $ContrasennaConfirmar) {
-        ActualizarUsuarioModel($Nombre,$Apellido,$Contrasenna,$Dirrecion,$Telefono,$TipoUsuario,$IdUsuario); 
+        ActualizarUsuarioModel($Nombre,$Apellido,$Contrasenna,$Dirrecion,$Telefono,$TipoUsuario,$Cedula); 
     } 
     
     header("Location: Usuarios.php");  

@@ -45,11 +45,11 @@ function AgregarUsuario($Cedula,$Nombre,$Apellido,$Contrasenna,$FechaNacimiento,
 
 /*Consultar usuario por id*/
 
-function ConsultarDatosUsuarioModel($id)
+function ConsultarDatosUsuarioModel($Cedula)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "call ConsultarUsuarioId($id);";
+    $procedimiento = "call ConsultarUsuarioId($Cedula);";
     $datos = $enlace -> query($procedimiento);
 
     CloseDB($enlace);
@@ -74,11 +74,11 @@ function VerRolesModel()
 
 /*Actualizar usuarios*/
 
-function ActualizarUsuarioModel($Nombre,$Apellido,$Contrasenna,$Dirrecion,$Telefono,$TipoUsuario,$IdUsuario)
+function ActualizarUsuarioModel($Nombre,$Apellido,$Contrasenna,$Dirrecion,$Telefono,$TipoUsuario,$Cedula)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "call ActualizarUsuarios('$Nombre','$Apellido','$Contrasenna','$Dirrecion','$Telefono',$TipoUsuario,$IdUsuario);";
+    $procedimiento = "call ActualizarUsuarios('$Nombre','$Apellido','$Contrasenna','$Dirrecion','$Telefono',$TipoUsuario,$Cedula);";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);

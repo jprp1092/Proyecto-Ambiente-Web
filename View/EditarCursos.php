@@ -28,79 +28,80 @@ $datos = consultarCursoId($_GET["q"]);
     CargarMenu();
     ?>
 
-<form action="" method="post">
-    <div class="content">
-        <div class="templatemo-panels">
+    <form action="" method="post">
+        <div class="content">
+            <div class="templatemo-panels">
 
-            <br /><br />
+                <br /><br />
 
-            <input type="hidden" value="<?php echo $datos["idCurso"] ?>" id="txtId" name="txtId"> 
-            
-            <div class="row">
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-3">
-                    <label for="lblNombre" class="control-label">Nombre del curso</label>
-                    <input type="text" class="form-control" id="txtNombre" name="txtNombre"  required
-                         value="<?php echo $datos["nombre"] ?>">
-                </div>
+                <input type="hidden" value="<?php echo $datos["idCurso"] ?>" id="txtId" name="txtId">
 
-                <div class="col-md-3">
-                    <label for="lblModalidad" class="control-label">Modalidad</label>
-                    <select class="form-control" name="cboModalidad" id="cboModalidad" required>
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="lblNombre" class="control-label">Nombre del curso</label>
+                        <input type="text" class="form-control" id="txtNombre" name="txtNombre" required
+                            value="<?php echo $datos["nombreCurso"] ?>">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="lblModalidad" class="control-label">Modalidad</label>
+                        <select class="form-control" name="cboModalidad" id="cboModalidad" required>
                             <option value="">Seleccione Modalidad...</option>
                             <option value="Virtual">Presencial</option>
                             <option value="Presencial">Virtual</option>
                         </select>
-                </div>
+                    </div>
 
-                <div class="col-md-3">
-                    <label for="lblHorario" class="control-label">Horarios</label>
-                    <select class="form-control" name="cboHorario" id="cboHorario" required>
+                    <div class="col-md-3">
+                        <label for="lblHorario" class="control-label">Horarios</label>
+                        <select class="form-control" name="cboHorario" id="cboHorario" required>
                             <option value="">Seleccione Horario...</option>
                             <option value="Manaña">Mañana</option>
                             <option value="Tarde">Tarde</option>
                             <option value="Noche">Noche</option>
                         </select>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="lblCreditos" class="control-label">Creditos</label>
+                        <input type="text" class="form-control" id="txtCreditos" name="txtCreditos" required
+                            value="<?php echo $datos["creditos"] ?>">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="lblDocente" class="control-label">Docentes</label>
+                        <select class="form-control" id="cboProfesor" name="cboProfesor" required>
+                            <?php 
+                                ListarProfesoresController($datos["cedula"]); 
+                                ?>
+                        </select>
+                    </div>
                 </div>
             </div>
 
             <br />
 
             <div class="row">
-                <div class="col-md-1">
+                <div class="col-md-5">
                 </div>
                 <div class="col-md-3">
-                    <label for="lblCreditos" class="control-label">Creditos</label>
-                    <input type="text" class="form-control" id="txtCreditos" name="txtCreditos" required
-                         value="<?php echo $datos["creditos"] ?>">
+                    <input type="submit" class="btn btn-info" value="Actualizar" id="btnActualizar"
+                        name="btnActualizar">
                 </div>
-
                 <div class="col-md-3">
-                    <label for="lblDocente" class="control-label">Docentes</label>
-                    <select class="form-control" id="cboProfesor" name="cboProfesor" required>
-                                <?php 
-                                ListarProfesoresController($datos["idUsuario"]); 
-                                ?>
-                        </select>
-                </div>            
+                    <a href="Cursos.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                </div>
             </div>
         </div>
-
-        <br />
-
-        <div class="row">
-            <div class="col-md-5">
-            </div>
-            <div class="col-md-3">
-                <input type="submit" class="btn btn-info" value="Actualizar" id="btnActualizar" name="btnActualizar">
-            </div>
-            <div class="col-md-3">
-                <a href="Cursos.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
-            </div>
         </div>
-    </div>
-    </div>
     </form>
 </body>
 

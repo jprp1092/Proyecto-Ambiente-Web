@@ -14,7 +14,7 @@ function ListarCursos()
 function ListarProfesoresModel() {
     $enlace = OpenDB();
 
-    $procedimiento = "call ListarProfesor();";
+    $procedimiento = "call ListarProfesores();";
     $datos = $enlace -> query($procedimiento);
 
     CloseDB($enlace);
@@ -35,7 +35,7 @@ function ConsultaCursoModel($id)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "call consultarCursoId($id);";
+    $procedimiento = "call ConsultarCurso($id);";
     $datos = $enlace -> query($procedimiento);
 
     CloseDB($enlace);

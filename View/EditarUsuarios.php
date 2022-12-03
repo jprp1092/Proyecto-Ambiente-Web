@@ -27,14 +27,14 @@ $datos = ConsultarDatosUsuario($_GET["q"]);
     <form action="" method="post">
 
         <?php
-    CargarMenu();
-    ?>
+        CargarMenu();
+        ?>
 
         <div class="content">
             <div class="templatemo-panels">
 
                 <br /><br />
-                <input type="hidden" value="<?php echo $datos["idUsuario"] ?>" id="txtId" name="txtId">
+                <input type="hidden" value="<?php echo $datos["cedula"] ?>" id="txtCedula" name="txtCedula">
 
                 <div class="row">
                     <div class="col-md-1">
@@ -123,15 +123,15 @@ $datos = ConsultarDatosUsuario($_GET["q"]);
                 <br />
 
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-8 margin-bottom-15">
                     </div>
 
-                    <div class="col-md-3">
-                        <input type="submit" class="btn btn-info" value="Actualizar" id="btnActualizar"
-                        name="btnActualizar">
-                    </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 margin-bottom-15">
+                        <input type="submit" class="btn btn-info" value="Actualizar" id="btnActualizar" name="btnActualizar">
                         <a href="Usuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                    </div>
+                    
+                    <div class="col-md-1 margin-bottom-15">
                     </div>
                 </div>
             </div>
