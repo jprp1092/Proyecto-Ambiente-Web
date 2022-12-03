@@ -43,12 +43,20 @@ function AgregarUsuario($Cedula,$Nombre,$Apellido,$Contrasenna,$FechaNacimiento,
 
 /*Fin funcion para agregar usuarios nuevos*/
 
-/* Funcion ver opciones de menu segun rol */
+/*Consultar usuario por id*/
 
+function ConsultarDatosUsuarioModel($id)
+{
+    $enlace = OpenDB();
 
+    $procedimiento = "call ConsultarUsuarioId($id);";
+    $datos = $enlace -> query($procedimiento);
 
-/* Fin funcion ver opciones de menu segun rol */
+    CloseDB($enlace);
+    return $datos;
+}
 
+/*Fin consultar usuario por id*/
 
 /*Funcion para poder ver lo roles en la creacion de usuarios*/
 
@@ -64,23 +72,18 @@ function VerRolesModel()
 
 /*Fin funcion para poder ver lo roles en la creacion de usuarios*/
 
-function ConsultarDatosUsuarioModel($id)
+/*Actualizar usuarios*/
+
+function ActualizarUsuarioModel($Nombre,$Apellido,$Contrasenna,$Dirrecion,$Telefono,$TipoUsuario,$IdUsuario)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "call ConsultarUsuarioId($id);";
-    $datos = $enlace -> query($procedimiento);
-
-    CloseDB($enlace);
-    return $datos;
-}
-
-function ActualizarUsuarioModel($Nombre,$Apellido, $Contrasenna,$Telefono, $Direccion, $Rol,$id,$estado)
-{
-    $enlace = OpenDB();
-    $procedimiento = "call ActualizarUsuario('$Nombre','$Apellido', '$Contrasenna','$Telefono', '$Direccion','$Rol',$id,$estado);";
+    $procedimiento = "call ActualizarUsuarios('$Nombre','$Apellido','$Contrasenna','$Dirrecion','$Telefono',$TipoUsuario,$IdUsuario);";
     $enlace -> query($procedimiento);
+
     CloseDB($enlace);
 }
+
+/*Fin actualizar usuarios*/
 
 ?>

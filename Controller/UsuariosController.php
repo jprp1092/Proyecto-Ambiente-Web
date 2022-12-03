@@ -97,13 +97,18 @@ if(isset($_POST["btnActualizar"]))
     $Nombre = $_POST["txtNombre"];
     $Apellido = $_POST["txtApellido"];
     $Contrasenna = $_POST["txtContrasenna"];
+    $Dirrecion = $_POST["txtDireccion"];
     $Telefono = $_POST["txtTelefono"];
-    $Direccion = $_POST["txtDireccion"];
-    $Rol = $_POST["cboTipoUsuario"];
-    $id = $_POST["txtId"];
-    $estado = $_POST["cboEstado"];
+    $Correo = $_POST["txtTelefono"];
+    $TipoUsuario = $_POST["cboTipoUsuario"];
+    $Contrasenna = $_POST["txtContrasenna"];
+    $ContrasennaConfirmar = $_POST["txtConfirmarContraseña"];
+    $IdUsuario = $_POST["txtId"];
 
-    ActualizarUsuarioModel($Nombre,$Apellido, $Contrasenna, $Telefono, $Direccion, $Rol,$id,$estado); 
+    if ($Contrasenna === $ContrasennaConfirmar) {
+        ActualizarUsuarioModel($Nombre,$Apellido,$Contrasenna,$Dirrecion,$Telefono,$TipoUsuario,$IdUsuario); 
+    } 
+    
     header("Location: Usuarios.php");  
 }
 
