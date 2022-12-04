@@ -86,4 +86,18 @@ function ActualizarUsuarioModel($Nombre,$Apellido,$Contrasenna,$Dirrecion,$Telef
 
 /*Fin actualizar usuarios*/
 
+/*Inactivar usuario*/
+
+function InactivarUsuarioModel($Cedula)
+{
+    $enlace = OpenDB();
+    $procedimiento = "call InactivarUsuario($Cedula);";
+
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
+/*Fin Inactivar usuario*/
+
 ?>

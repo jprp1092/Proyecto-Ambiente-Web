@@ -15,7 +15,7 @@ if(isset($_POST["btnIngresar"]))
     if($datosUsuario -> num_rows > 0)
     {
         $resultado = mysqli_fetch_array($datosUsuario);
-
+        $_SESSION["sesionCedula"] = $resultado["cedula"];
         $_SESSION["sessionNombre"] = $resultado["nombre"] . " " . $resultado["apellido"];
         $_SESSION["sessionTipoRol"] = $resultado["tipoRol"];
         header("Location: View\home.php");
@@ -61,10 +61,20 @@ function CargarUsuarios()
         {
             echo "<tr>";
             echo "<td>" . $resultado["cedula"] . "</td>";
-            echo "<td>" . $resultado["nombre"] . "</td>";
+            echo "<td>" . $resultado["nombre"] . '  ' . $resultado["apellido"] . "</td>";
             echo "<td>" . $resultado["descripcion"] . "</td>";
             echo "<td>" . $resultado["descripcionEstado"] . "</td>";
-            echo '<td> <a class="btnPresionar"  href="EditarUsuarios.php?q=' . $resultado["cedula"] . '">Editar</a></td>';     
+
+            if($_SESSION["sesionCedula"] != $resultado["cedula"])
+                echo '<td><a class="btn" href="EditarUsuarios.php?q=' . $resultado["cedula"] . '">Actualizar<a/>';
+            else
+                echo '<td><a class="btn" style="cursor: not-allowed">Actualizar<a/>';
+
+            if($resultado["estado"] == 1 && $_SESSION["sesionCedula"] != $resultado["cedula"])
+                echo '<a class="btn open-UserDialog" data-toggle="modal" data-target="#DeleteUserModal" data-id=' . $resultado["cedula"] . '>Inactivar</a></td>';
+            else
+                echo '<a class="btn" style="cursor: not-allowed">Inactivar</a></td>';
+     
             echo "</tr>";
         }
     }
@@ -110,6 +120,12 @@ if(isset($_POST["btnActualizar"]))
     } 
     
     header("Location: Usuarios.php");  
+}
+
+if(isset($_POST["InactivarUsuario"]))
+{
+    $Id = $_POST["Cedula"];
+    InactivarUsuarioModel($Cedula);  
 }
 
 ?>

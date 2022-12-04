@@ -31,18 +31,25 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-3">
-                        <label for="lblCedula" class="control-label">Identificación</label>
-                        <input type="text" class="form-control" id="txtIdentificacion" name="txtIdentificacion">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblNombre" class="control-label">Nombre</label>
+                        <label for="lblNombre" class="control-label">Nombre Curso</label>
                         <input type="text" class="form-control" id="txtNombre" name="txtNombre">
                     </div>
 
                     <div class="col-md-3">
-                        <label for="lblEstado" class="control-label">Apellidos</label>
-                        <input type="text" class="form-control" id="txtApellido" name="txtApellido">
+                        <label for="lblModalidad" class="control-label">Modalidad</label>
+                        <select class="form-control" id="cboModalidad" name="cboModalidad" required>
+                            <option value="Presencial">Presencial</option>
+                            <option value="Virtual">Virtual</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="lblHorario" class="control-label">Horario</label>
+                        <select class="form-control" id="cboHorario" name="cboHorario" required>
+                            <option value="Manaña">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noche">Noche</option>
+                        </select>
                     </div>
                 </div>
 
@@ -52,66 +59,23 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-3">
-                        <label for="lblTipoUsuario" class="control-label">Fecha Nacimiento</label>
-                        <input type="date" class="form-control" id="txtFechaNacimiento" name="txtFechaNacimiento">
+                        <label for="lblCreditos" class="control-label">Numero de creditos</label>
+                        <input type="text" class="form-control" id="txtCreditos" name="txtCreditos">
                     </div>
 
                     <div class="col-md-3">
-                        <label for="lblContrasenna" class="control-label">Contraseña</label>
-                        <input type="password" class="form-control" id="txtContraseña" name="txtContraseña">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblConfirmarContrasenna" class="control-label">Confirmar contraseña</label>
-                        <input type="password" class="form-control" id="txtConfirmarContraseña"
-                            name="txtConfirmarContraseña">
-                    </div>
-                </div>
-
-                <br>
-
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="lblDireccion" class="control-label">Dirección</label>
-                        <input type="text" class="form-control" id="txtDireccion" name="txtDireccion">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblTelefono" class="control-label">Teléfono</label>
-                        <input type="text" class="form-control" id="txtTelefono" name="txtTelefono">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblCorreo" class="control-label">Correo eléctronico</label>
-                        <input type="email" class="form-control" id="txtEmail" name="txtEmail">
-                    </div>
-                </div>
-
-                <br />
-
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblRol" class="control-label">Rol de Usuario</label>
-                        <select class="form-control" id="cboTipoUsuario" name="cboTipoUsuario" required>
-                            <?php 
-                                VerRolesController($datos["idRol"]); 
+                        <label for="lblProfesor" class="control-label">Asignar profesor</label>
+                        <select class="form-control" id="cboProfesor" name="cboProfesor" required>
+                                <?php 
+                                ListarProfesoresController($datos["cedula"]); 
                                 ?>
                         </select>
                     </div>
 
-                    <div class="col-md-3 margin-bottom-15">
-                        <label for="lblEstado" class="control-label">Estado</label>
-                        <select class="form-control" id="cboEstado" name="cboEstado" required>
-                            <option value=1>Activo</option>
-                            <option value=0>Inactivo</option>
-                        </select>
+                    <div class="col-md-3">
                     </div>
                 </div>
+
                 <br />
 
                 <div class="row">
@@ -119,8 +83,8 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                     </div>
                     
                     <div class="col-md-3 margin-bottom-15">
-                        <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregar" name="btnAgregar">
-                        <a href="Usuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                        <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregarCurso" name="btnAgregarCurso">
+                        <a href="Cursos.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                     </div>
 
                     <div class="col-md-1 margin-bottom-15">

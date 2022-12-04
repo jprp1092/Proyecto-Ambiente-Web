@@ -64,7 +64,7 @@ function consultarCursoId($id)
 }
 
 
-if(isset($_POST["btnActualizar"]))
+if(isset($_POST["btnActualizarCurso"]))
 {
 
     $Nombre = $_POST["txtNombre"];
@@ -72,10 +72,9 @@ if(isset($_POST["btnActualizar"]))
     $Horario = $_POST["cboHorario"];
     $Creditos = $_POST["txtCreditos"];
     $Docentes = $_POST["cboProfesor"];
-    $id = $_POST["txtId"];
    
 
-    ActualizarCursoModel($Nombre,$Modalidad, $Horario, $Creditos, $Docentes,$id); 
+    ActualizarCursoModel($Nombre,$Modalidad, $Horario, $Creditos, $Docentes); 
     header("Location: Cursos.php");  
 }
 

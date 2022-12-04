@@ -28,81 +28,79 @@ $datos = consultarCursoId($_GET["q"]);
     CargarMenu();
     ?>
 
-    <form action="" method="post">
-        <div class="content">
-            <div class="templatemo-panels">
+    <div class="content">
 
-                <br /><br />
+        <br /><br />
+        <input type="hidden" value="<?php echo $datos["nombreCurso"] ?>" id="txtNombreCurso" name="txtNombreCurso">
 
-                <input type="hidden" value="<?php echo $datos["idCurso"] ?>" id="txtId" name="txtId">
 
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="lblNombre" class="control-label">Nombre del curso</label>
-                        <input type="text" class="form-control" id="txtNombre" name="txtNombre" required
-                            value="<?php echo $datos["nombreCurso"] ?>">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblModalidad" class="control-label">Modalidad</label>
-                        <select class="form-control" name="cboModalidad" id="cboModalidad" required>
-                            <option value="">Seleccione Modalidad...</option>
-                            <option value="Virtual">Presencial</option>
-                            <option value="Presencial">Virtual</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblHorario" class="control-label">Horarios</label>
-                        <select class="form-control" name="cboHorario" id="cboHorario" required>
-                            <option value="">Seleccione Horario...</option>
-                            <option value="Manaña">Mañana</option>
-                            <option value="Tarde">Tarde</option>
-                            <option value="Noche">Noche</option>
-                        </select>
-                    </div>
+        <form class="form-horizontal templatemo-login-form-2" role="form" action="" method="post">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-3">
+                    <label for="lblNombre" class="control-label">Nombre Curso</label>
+                    <input type="text" class="form-control" id="txtNombre" name="txtNombre" value="<?php echo $datos["nombreCurso"] ?>">
                 </div>
 
-                <br />
+                <div class="col-md-3">
+                    <label for="lblModalidad" class="control-label">Modalidad</label>
+                    <select class="form-control" id="cboModalidad" name="cboModalidad" value="<?php echo $datos["modalidad"] ?>" required>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Virtual">Virtual</option>
+                    </select>
+                </div>
 
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="lblCreditos" class="control-label">Creditos</label>
-                        <input type="text" class="form-control" id="txtCreditos" name="txtCreditos" required
-                            value="<?php echo $datos["creditos"] ?>">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblDocente" class="control-label">Docentes</label>
-                        <select class="form-control" id="cboProfesor" name="cboProfesor" required>
-                            <?php 
-                                ListarProfesoresController($datos["cedula"]); 
-                                ?>
-                        </select>
-                    </div>
+                <div class="col-md-3">
+                    <label for="lblHorario" class="control-label">Horario</label>
+                    <select class="form-control" id="cboHorario" name="cboHorario" value="<?php echo $datos["horario"] ?>" required>
+                        <option value="Manaña">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noche">Noche</option>
+                    </select>
                 </div>
             </div>
 
             <br />
 
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-1">
                 </div>
                 <div class="col-md-3">
-                    <input type="submit" class="btn btn-info" value="Actualizar" id="btnActualizar"
-                        name="btnActualizar">
+                    <label for="lblCreditos" class="control-label">Numero de creditos</label>
+                    <input type="text" class="form-control" id="txtCreditos" name="txtCreditos" value="<?php echo $datos["creditos"] ?>">
                 </div>
+
                 <div class="col-md-3">
-                    <a href="Cursos.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                    <label for="lblProfesor" class="control-label">Asignar profesor</label>
+                    <select class="form-control" id="cboProfesor" name="cboProfesor" value="<?php echo $datos["docente"] ?>" required>
+                                <?php 
+                                ListarProfesoresController($datos["cedula"]); 
+                                ?>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
                 </div>
             </div>
-        </div>
-        </div>
-    </form>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-8 margin-bottom-15">
+                </div>
+
+                <div class="col-md-3 margin-bottom-15">
+                    <input type="submit" class="btn btn-info" value="Agregar" id="btnActualizarCurso"name="btnActualizarCurso">
+                    <a href="Cursos.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                </div>
+
+                <div class="col-md-1 margin-bottom-15">
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
 </body>
 
 </html>

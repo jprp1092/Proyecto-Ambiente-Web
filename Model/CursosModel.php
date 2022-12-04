@@ -42,11 +42,11 @@ function ConsultaCursoModel($id)
     return $datos;
 }
 
-function ActualizarCursoModel($Nombre,$Modalidad, $Horario, $Creditos, $Docentes,$id)
+function ActualizarCursoModel($Nombre, $Modalidad, $Horario, $Creditos, $Docentes)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "call ActualizarCursos('$Nombre','$Modalidad','$Horario', $Creditos,$Docentes,$id);";
+    $procedimiento = "call ActualizarCursos('$Nombre','$Modalidad','$Horario', $Creditos,$Docentes);";
     $datos = $enlace -> query($procedimiento);
 
     CloseDB($enlace);
