@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE)
     session_start();
 
-include_once __DIR__ . '\general.php';
+include_once __DIR__ . '\generales.php';
 include_once __DIR__ . '\..\Controller\PantallasController.php';
 include_once __DIR__ . '\..\Controller\UsuariosController.php';
 
@@ -31,9 +31,17 @@ $datos = ConsultarDatosUsuario($_GET["q"]);
         ?>
 
         <div class="content">
+
+        
+        <br>
+        <hr>
+        <h2>Actualizar Datos</h2>
+        <hr>
+        <br>
+
             <div class="templatemo-panels">
 
-                <br /><br />
+                
                 <input type="hidden" value="<?php echo $datos["cedula"] ?>" id="txtCedula" name="txtCedula">
 
                 <div class="row">
@@ -41,8 +49,8 @@ $datos = ConsultarDatosUsuario($_GET["q"]);
                     </div>
                     <div class="col-md-3">
                         <label for="lblCedula" class="control-label">Identificación</label>
-                        <input type="text" class="form-control" id="txtIdentificacion" name="txtIdentificacion" required
-                        readonly value="<?php echo $datos["cedula"] ?>">
+                        <input type="text" class="form-control" id="txtIdentificacion" disabled=»disabled» readonly name="txtIdentificacion" required
+                        value="<?php echo $datos["cedula"] ?>">
                     </div>
 
                     <div class="col-md-3">
@@ -141,6 +149,11 @@ $datos = ConsultarDatosUsuario($_GET["q"]);
         <script src="js/usuarios.js"></script>
     </form>
 </body>
+
+
+<?php 
+        footerSite();
+    ?>
 
 
 

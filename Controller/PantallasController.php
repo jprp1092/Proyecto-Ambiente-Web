@@ -15,13 +15,14 @@ function CargarMenu()
         echo 
         
         '<section class="sideBar">
-
         <div class="logo">
-             <img src="images/logo.png" width="90px">
-             <h1>SISTEMA</h1>
-             <h2>ACADÉMICO</h2>
+             <img src="images/logo.png" width="120px">
         </div>
         
+        <br>
+        <br>
+        <br>
+
         <div>
             <a class="icon-profile"><i class="fa fa-user"></i></a>
             <a class="userName">', $_SESSION["sessionNombre"], '</a>
@@ -55,7 +56,6 @@ function CargarMenu()
                 
                 
                 
-
             </li>
            </ul>
           </div>

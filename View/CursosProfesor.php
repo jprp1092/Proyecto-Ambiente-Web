@@ -6,49 +6,29 @@ if (session_status() == PHP_SESSION_NONE)
 include_once __DIR__ . '\generales.php';
 include_once __DIR__ . '\..\Controller\PantallasController.php';
 include_once __DIR__ . '\..\Controller\CursosController.php';
-
 ?>
 
 <!DOCTYPE html>
 
-    <head>
-        <?php
-        headerSite();
-        ?>
-    </head>
+<head>
+    <?php
+    headerSite();
+    ?>
+</head>
 
-    <body>
-        <?php
-        CargarMenu();
-        ?>
-
-    
+<body>
+    <?php
+    CargarMenu();
+    ?>
 
     <div class="content">
         <div class="templatemo-panels">
-        <br>
-        <hr>
-        <h2>Cursos</h2>
-        <hr>
-        <br>
 
-        <div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-3">
-				<div class="card">
-					<div class="card-body">
-                     <a href="CrearCurso.php" style="float: right;" class="btnPresionar">Agregar</a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>             
-    
-
-                
-                        
+        <br>
+        <h2> Cursos asignados</h2>
+            
             <div class="container" style="margin-top: 40px">
-        
+            
                 <div class="row">
                     <div class="row">
                         <div class="col-md-12">
@@ -59,31 +39,27 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                                         <th>Nombre Curso</th>
                                         <th>Modalidad</th>
                                         <th>Horario</th>
-                                        <th>Creditos</th>
-                                        <th>Profesor Asignado</th>
-                                        <th>Acciones</th>
+                        
                                     </tr>
                                 </thead>
                                 <tbody>
 
-                                    <?php
-                                        CargarCursos();
-                                    ?>
+                                  
 
                                 </tbody>
                             </table>
 
-                                </div>
-                            </div>
                         </div>
-                        
                     </div>
                 </div>
-            </div>
-        </body>
 
-            <?php 
-            footerSite();
-            ?>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php 
+        footerSite();
+    ?>
 
 </html>

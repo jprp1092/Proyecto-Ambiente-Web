@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE)
     session_start();
 
-include_once __DIR__ . '\general.php';
+include_once __DIR__ . '\generales.php';
 include_once __DIR__ . '\..\Controller\PantallasController.php';
 include_once __DIR__ . '\..\Controller\CursosController.php';
 
@@ -30,7 +30,13 @@ $datos = consultarCursoId($_GET["q"]);
 
     <div class="content">
 
-        <br /><br />
+        <br>
+        <hr>
+        <h2>Actualizar Cursos</h2>
+        <hr>
+        <br>
+
+       
         <input type="hidden" value="<?php echo $datos["nombreCurso"] ?>" id="txtNombreCurso" name="txtNombreCurso">
 
 
@@ -102,5 +108,9 @@ $datos = consultarCursoId($_GET["q"]);
     </div>
     </div>
 </body>
+
+<?php 
+        footerSite();
+    ?>
 
 </html>

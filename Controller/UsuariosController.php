@@ -95,7 +95,7 @@ if(isset($_POST["btnAgregar"]))
     $Estado = $_POST["cboEstado"];
 
     if ($Contrasenna === $Contrasenna2) {
-        AgregarUsuario($Cedula,$Nombre,$Apellido,$FechaNacimiento,$Contrasenna,$Direccion,$Telefono,$Correo,$Rol,$Estado);
+        AgregarUsuario($Cedula,$Nombre,$Apellido,$Contrasenna,$FechaNacimiento,$Direccion,$Telefono,$Correo,$Rol,$Estado);
         header("Location: Usuarios.php");
     }else{
         header("Location: CrearUsuarios.php");

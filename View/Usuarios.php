@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE)
     session_start();
 
-include_once __DIR__ . '\general.php';
+include_once __DIR__ . '\generales.php';
 include_once __DIR__ . '\..\Controller\PantallasController.php';
 include_once __DIR__ . '\..\Controller\UsuariosController.php';
 ?>
@@ -21,9 +21,35 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
     CargarMenu();
     ?>
 
+    
+ 
+
     <div class="content">
         <div class="templatemo-panels">
+
+        <br>
+        <hr>
+        <h2>Usuarios</h2>
+        <hr>
+        <br>
+
+        
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-3">
+                            <div class="card">
+                                <div class="card-body">
+                                <a href="CrearUsuarios.php" style="float: right;" class="btnPresionar">Agregar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
             <div class="container" style="margin-top: 40px">
+
+
+
                 <div class="row">
                     <div class="row">
                         <div class="col-md-12">
@@ -50,7 +76,6 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
                         </div>
                     </div>
                 </div>
-                <a href="CrearUsuarios.php" class="btnPresionar">Agregar</a>
             </div>
         </div>
     </div>
@@ -79,6 +104,10 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
     <script src="js/usuarios.js"></script>';
 
 </body>
+
+<?php 
+        footerSite();
+    ?>
 
 </html>
 

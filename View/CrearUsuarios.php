@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE)
     session_start();
 
-include_once __DIR__ . '\general.php';
+include_once __DIR__ . '\generales.php';
 include_once __DIR__ . '\..\Controller\PantallasController.php';
 include_once __DIR__ . '\..\Controller\UsuariosController.php';
 ?>
@@ -25,7 +25,13 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
     ?>
 
     <div class="content">
-            <br /><br />
+
+        <br>
+        <hr>
+        <h2>Agregar Usuarios</h2>
+        <hr>
+        <br>
+      
             <form class="form-horizontal templatemo-login-form-2" role="form" action="" method="post">
                 <div class="row">
                     <div class="col-md-1">
@@ -130,5 +136,9 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
         </div>
     </div>
 </body>
+
+<?php 
+        footerSite();
+    ?>
 
 </html>
