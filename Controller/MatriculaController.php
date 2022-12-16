@@ -7,11 +7,6 @@ include_once __DIR__ . '\..\Model\MatriculaModel.php';
 
 function CargarMatriculasController()
 {
-    $verdad = true;
-    if ($verdad === true) {
-        
-    }
-
     $datosMatricula = ListarMatriculasModel($Cedula);
 
     if($datosMatricula -> num_rows > 0)
