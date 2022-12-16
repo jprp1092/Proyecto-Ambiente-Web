@@ -32,25 +32,25 @@ include_once __DIR__ . '\..\Controller\PantallasController.php';
         mostrarBienvenida();
         ?>
 
-        <h4>El sistema academico posee muchas funciones que ayudan a los estudintes y profesores <br>
-         en los labores realizados de la institucion educativa.</h4>
+        <h4>El sistema academico posee muchas funciones que ayudan a los estudiantes y profesores <br>
+         en los labores realizados de la institución educativa.</h4>
 
         <div class="box-container">
 
             <div class="box">
                 <a class="homeIcon"><i class="fa fa-bolt"></i></a>
                 <h3>Agilidad</h3>
-                <p>Ayuda a agilizar los procesos de matricula.</p>
+                <p>Ayuda a agilizar los procesos de matrícula.</p>
             </div>
             <div class="box">
                 <a class="homeIcon"><i class="fa fa-gem"></i></a>
                 <h3>Eficiencia</h3>
-                <p>Ofrece servicios que mejoran los procesos academicos.</p>
+                <p>Ofrece servicios que mejoran los procesos académicos.</p>
             </div>
             <div class="box">
                 <a class="homeIcon"><i class="fa fa-lightbulb"></i></a>
                 <h3>Desempeño</h3>
-                <p>Ayuda a los profesores y estudintes a tener un mejor desempeño.</p>
+                <p>Ayuda a los profesores y estudiantes a tener un mejor desempeño.</p>
             </div>
         </div>
     </div>
