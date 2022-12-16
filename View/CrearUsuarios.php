@@ -31,109 +31,108 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
         <h2>Agregar Usuarios</h2>
         <hr>
         <br>
-      
-            <form class="form-horizontal templatemo-login-form-2" role="form" action="" method="post">
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="lblCedula" class="control-label">Identificación</label>
-                        <input type="text" class="form-control" id="txtIdentificacion" name="txtIdentificacion">
-                    </div>
 
-                    <div class="col-md-3">
-                        <label for="lblNombre" class="control-label">Nombre</label>
-                        <input type="text" class="form-control" id="txtNombre" name="txtNombre">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblEstado" class="control-label">Apellidos</label>
-                        <input type="text" class="form-control" id="txtApellido" name="txtApellido">
-                    </div>
+        <form class="form-horizontal templatemo-login-form-2" role="form" action="" method="post">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-3">
+                    <label for="lblCedula" class="control-label">Identificación</label>
+                    <input type="text" class="form-control" id="txtIdentificacion" name="txtIdentificacion">
                 </div>
 
-                <br />
-
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="lblTipoUsuario" class="control-label">Fecha Nacimiento</label>
-                        <input type="date" class="form-control" id="txtFechaNacimiento" name="txtFechaNacimiento">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblContrasenna" class="control-label">Contraseña</label>
-                        <input type="password" class="form-control" id="txtContraseña" name="txtContraseña">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblConfirmarContrasenna" class="control-label">Confirmar contraseña</label>
-                        <input type="password" class="form-control" id="txtConfirmarContraseña"
-                            name="txtConfirmarContraseña">
-                    </div>
+                <div class="col-md-3">
+                    <label for="lblNombre" class="control-label">Nombre</label>
+                    <input type="text" class="form-control" id="txtNombre" name="txtNombre">
                 </div>
 
-                <br>
+                <div class="col-md-3">
+                    <label for="lblEstado" class="control-label">Apellidos</label>
+                    <input type="text" class="form-control" id="txtApellido" name="txtApellido">
+                </div>
+            </div>
 
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="lblDireccion" class="control-label">Dirección</label>
-                        <input type="text" class="form-control" id="txtDireccion" name="txtDireccion">
-                    </div>
+            <br />
 
-                    <div class="col-md-3">
-                        <label for="lblTelefono" class="control-label">Teléfono</label>
-                        <input type="text" class="form-control" id="txtTelefono" name="txtTelefono">
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="lblCorreo" class="control-label">Correo eléctronico</label>
-                        <input type="email" class="form-control" id="txtEmail" name="txtEmail">
-                    </div>
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-3">
+                    <label for="lblTipoUsuario" class="control-label">Fecha Nacimiento</label>
+                    <input type="date" class="form-control" id="txtFechaNacimiento" name="txtFechaNacimiento">
                 </div>
 
-                <br />
+                <div class="col-md-3">
+                    <label for="lblContrasenna" class="control-label">Contraseña</label>
+                    <input type="password" class="form-control" id="txtContraseña" name="txtContraseña">
+                </div>
 
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
+                <div class="col-md-3">
+                    <label for="lblConfirmarContrasenna" class="control-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="txtConfirmarContraseña"
+                        name="txtConfirmarContraseña">
+                </div>
+            </div>
 
-                    <div class="col-md-3">
-                        <label for="lblRol" class="control-label">Rol de Usuario</label>
-                        <select class="form-control" id="cboTipoUsuario" name="cboTipoUsuario" required>
-                            <?php 
+            <br>
+
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-3">
+                    <label for="lblDireccion" class="control-label">Dirección</label>
+                    <input type="text" class="form-control" id="txtDireccion" name="txtDireccion">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="lblTelefono" class="control-label">Teléfono</label>
+                    <input type="text" class="form-control" id="txtTelefono" name="txtTelefono">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="lblCorreo" class="control-label">Correo eléctronico</label>
+                    <input type="email" class="form-control" id="txtEmail" name="txtEmail">
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="lblRol" class="control-label">Rol de Usuario</label>
+                    <select class="form-control" id="cboTipoUsuario" name="cboTipoUsuario" required>
+                        <?php 
                                 VerRolesController($datos["idRol"]); 
                                 ?>
-                        </select>
-                    </div>
-
-                    <div class="col-md-3 margin-bottom-15">
-                        <label for="lblEstado" class="control-label">Estado</label>
-                        <select class="form-control" id="cboEstado" name="cboEstado" required>
-                            <option value=1>Activo</option>
-                            <option value=0>Inactivo</option>
-                        </select>
-                    </div>
+                    </select>
                 </div>
-                <br />
 
-                <div class="row">
-                    <div class="col-md-8 margin-bottom-15">
-                    </div>
-                    
-                    <div class="col-md-3 margin-bottom-15">
-                        <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregar" name="btnAgregar">
-                        <a href="Usuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
-                    </div>
-
-                    <div class="col-md-1 margin-bottom-15">
-                    </div>
+                <div class="col-md-3 margin-bottom-15">
+                    <label for="lblEstado" class="control-label">Estado</label>
+                    <select class="form-control" id="cboEstado" name="cboEstado" required>
+                        <option value=1>Activo</option>
+                        <option value=0>Inactivo</option>
+                    </select>
                 </div>
-            </form>
-        </div>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-md-8 margin-bottom-15">
+                </div>
+
+                <div class="col-md-3 margin-bottom-15">
+                    <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregar" name="btnAgregar">
+                    <a href="Usuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                </div>
+
+                <div class="col-md-1 margin-bottom-15">
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 

@@ -21,6 +21,16 @@ function ListarProfesoresModel() {
     return $datos;
 }
 
+function ListarNombreCursoModel() {
+    $enlace = OpenDB();
+
+    $procedimiento = "call ListarNombreCurso();";
+    $datos = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datos;
+}
+
 function AgregarCurso($Nombre,$Modalidad,$Horario,$Creditos,$Docente)
 {
     $enlace = OpenDB();

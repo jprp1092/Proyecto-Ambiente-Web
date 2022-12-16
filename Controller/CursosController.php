@@ -43,6 +43,24 @@ function ListarProfesoresController($CedulaUsuario) {
     }
 }
 
+function ListarNombreMateriaController($NombreMateria) {
+    
+    $datos = ListarNombreCursoModel();
+
+    if($datos -> num_rows > 0)
+    {
+        echo '<option selected value=""> Seleccione Materia... </option>';      
+        while($fila = mysqli_fetch_array($datos))
+        {
+            if($NombreMateria == $fila["nombreMateria"])
+                echo '<option selected value="' . $fila["nombreCurso"] . '">' . $fila["nombreCurso"] . '</option>';
+            else
+                echo '<option value="' . $fila["nombreCurso"] . '">' . $fila["nombreCurso"] . '</option>';
+        }
+        
+    }
+}
+
 if(isset($_POST["btnAgregarCurso"]))
 { 
     $Nombre = $_POST["txtNombre"];
