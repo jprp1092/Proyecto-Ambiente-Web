@@ -56,3 +56,10 @@ function CargarMenu()
         </section>';
     }
 }
+
+function mostrarBienvenida(){
+    echo 
+        '<div class="title">
+          <h2>¡Bienvenido al sistema academico ', $_SESSION["sessionNombre"], '!</h2>
+        </div>';
+}

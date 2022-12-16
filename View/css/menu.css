@@ -12,22 +12,11 @@
     margin: 0px;
     padding: 0px;
     color: white;
+    font-family: Rubik;
 }
-
-.modal-header {
-
-    color: black;
-
-}
-
-span {
-    color: #00395C;;
-    font-size:150%;
-}
-
 
 .sideBar {
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0%;
     height: 100%;
@@ -38,43 +27,25 @@ span {
 .content {
     position: absolute;
     top: 0%;
-    left: 12%;
+    left: 15%;
     height: 100%;
-    width: 88%;
+    width: 85%;
     background-color: rgb(0, 42, 68);
-
 }
 
 .sideBar .logo img{
-    position: relative;
-    top: 24px;
-    left: 12%;
-}
-
-.sideBar .logo h1,
-.sideBar .logo h2{
-    position: relative;
-    top: -50px;
-    width: 100px;
-}
-
-.sideBar .logo h1{
-    font-size: 22px;
-    left: 47%;
-}
-
-.sideBar .logo h2{
-    font-size: 20px;
-    left: 46%;
+    position: absolute;
+    top: 40px;
+    left: 27%;
 }
 
 .sideBar .icon-profile{
     position: relative;
-    top: 30px;
-    left: 12%;
+    top: 170px;
+    left: 15%;
     background-color: #ffffff;
     border: 3px solid rgb(0, 42, 68);
-    padding: 10px 10px;
+    padding: 14px 10px;
     border-radius: 100%;
 }
 
@@ -85,30 +56,23 @@ span {
     top: 4px;
 }
 
-.sideBar .signOut{
-    position: relative;
-    top: 18px;
-    left: 60%;
-}
-
 .sideBar .userName{
     position: absolute;
     text-decoration: none;
     font-size: 18px;
-    margin-top: 95px;
-    left: 12%;
+    top: 300px;
+    left: 15%;
     color: white;
 }
 
 .sideBar .menu{
     position: relative;
-    top: 140px;
+    top: 300px;
 }
 
 .sideBar .menu li{
     position: relative;
     padding: 24px 0px;
-    margin-left: -15px;
     list-style: none;
 }
 
@@ -119,15 +83,16 @@ span {
 
 .sideBar .menu i{
     position: relative;
-    left: 12%;
+    left: 15%;
 }
 
 .sideBar .menu a{
+    position: absolute;
     text-decoration: none;
     color: white;
-    position: relative;
-    left: 20%;
-    font-size: 18px;
+    top: 22px;
+    left: 30%;
+    font-size: 17px;
 }
 
 .sideBar .menu a:hover{
@@ -149,7 +114,6 @@ span {
     padding: 10px 20px;
     font-size: 16px;
     color: #6aa3d8;
-    
 }
 
 

@@ -30,9 +30,8 @@
           <link href="View/css/bootstrap-social.css" rel="stylesheet" type="text/css">	    
           <link href="../View/css/templatemo_main.css" rel="stylesheet" type="text/css">
           <link href="../View/css/menu.css" rel="stylesheet" type="text/css">
+          <link href="../View/css/home.css" rel="stylesheet" type="text/css">
           <script src="https://kit.fontawesome.com/a1b472f1fb.js" crossorigin="anonymous"></script>';
-
-       
   }
 
   function navBar()
@@ -60,7 +59,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-                <h2 class="modal-title" id="myModalLabel"></h2>¿Está seguro que quiere cerrar sesión?</h4>
+                <h4 style="color:black" class="modal-title" id="myModalLabel"></h4>¿Está seguro que quiere cerrar sesión?</h4>
               </div>
               <div class="modal-footer">
                 <form action="" method="post">
