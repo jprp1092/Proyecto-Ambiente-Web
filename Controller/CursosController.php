@@ -4,6 +4,7 @@ if (session_status() == PHP_SESSION_NONE)
     session_start();
 
 include_once __DIR__ . '\..\Model\CursosModel.php';
+include_once __DIR__ . '\..\Controller\UsuariosController.php';
 
 function CargarCursos()
 {
@@ -17,13 +18,32 @@ function CargarCursos()
             echo "<td>" . $resultado["nombreCurso"] . "</td>";
             echo "<td>" . $resultado["modalidad"] . "</td>";
             echo "<td>" . $resultado["horario"] . "</td>";
-            echo "<td>" . $resultado["creditos"] . "</td>";
-            echo "<td>" . $resultado["nombreProfesor"] . '  ' . $resultado["apellidoProfesor"] . "</td>";
-            echo '<td> <a class="btnPresionarAcciones"  href="EditarCursos.php?q=' . $resultado["idCurso"] . '">Editar</a></td>';             
+            echo '<td> <a class="btnPresionarAcciones"  href="EditarCursos.php?q=' . $resultado["idMatricula"] . '">Eliminar</a></td>';             
             echo "</tr>";
         }
     }
 }
+
+function CargarCursosPorDocente()
+{
+    $datosCursos = ListarCursosDocenteModel($_SESSION["sesionCedula"]);
+
+    if($datosCursos -> num_rows > 0)
+    {
+        while($resultado = mysqli_fetch_array($datosCursos))
+        {
+            echo "<tr>";
+            echo "<td>" . $resultado["nombreCurso"] . "</td>";
+            echo "<td>" . $resultado["modalidad"] . "</td>";
+            echo "<td>" . $resultado["horario"] . "</td>";
+            echo "<td>" . $resultado["creditos"] . "</td>";
+
+            
+            echo "</tr>";
+        }
+    }
+}
+
 
 function ListarProfesoresController($CedulaUsuario) {
     

@@ -39,12 +39,15 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                                         <th>Nombre Curso</th>
                                         <th>Modalidad</th>
                                         <th>Horario</th>
+                                        <th>creditos</th>
                         
                                     </tr>
                                 </thead>
                                 <tbody>
-
-                                  
+                                <?php
+                                    CargarCursosPorDocente();
+                                ?>
+                           
 
                                 </tbody>
                             </table>
