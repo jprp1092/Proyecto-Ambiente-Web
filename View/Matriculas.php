@@ -22,6 +22,11 @@ include_once __DIR__ . '\..\Controller\MatriculaController.php';
         CargarMenu();
         ?>
 
+
+
+</script>
+
+
     <div class="content">
         <div class="templatemo-panels">
             <br>
@@ -54,7 +59,7 @@ include_once __DIR__ . '\..\Controller\MatriculaController.php';
                                         <th>Curso</th>
                                         <th>Modalidad</th>
                                         <th>Horario</th>
-                                        <th>Acciones</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>

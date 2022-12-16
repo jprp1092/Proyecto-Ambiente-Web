@@ -1,10 +1,10 @@
 <?php
 
-function AgregarMatriculamodal($CedulaEstudiante,$NombreCurso,$Modalidad)
+function Matricular($id,$Materia,$Horario,$Modalidad)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "call AgregarMatricula('$CedulaEstudiante','$NombreCurso','$Modalidad','$Horario');";
+    $procedimiento = "call AgregarMatricula($id,'$Materia','$Horario','$Modalidad');";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);
