@@ -18,6 +18,7 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
     </head>
 
     <body>
+        
         <?php
         CargarMenu();
         ?>
@@ -85,5 +86,10 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
             <?php 
             footerSite();
             ?>
+          
+    <?php 
+        modal();
+    ?>
+
 
 </html>

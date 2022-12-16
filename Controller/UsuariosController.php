@@ -71,11 +71,12 @@ function CargarUsuarios()
                 echo '<td><a class="btn" style="cursor: not-allowed">Actualizar<a/>';
 
             if($resultado["estado"] == 1 && $_SESSION["sesionCedula"] != $resultado["cedula"])
-                echo '<a class="btn open-UserDialog" data-toggle="modal" data-target="#DeleteUserModal" data-id=' . $resultado["cedula"] . '>Inactivar</a></td>';
+              
+                echo '<a class="btn" data-toggle="modal" data-target="#DeleteUserModal" data-id=' . $resultado["cedula"] . '>Inactivar</a></td>';
             else
                 echo '<a class="btn" style="cursor: not-allowed">Inactivar</a></td>';
      
-            echo "</tr>";
+
         }
     }
 }
