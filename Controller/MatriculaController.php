@@ -4,15 +4,13 @@ if (session_status() == PHP_SESSION_NONE)
     session_start();
 
 include_once __DIR__ . '\..\Model\MatriculaModel.php';
+include_once __DIR__ . '\..\Controller\UsuariosController.php';
+
 
 function CargarMatriculasController()
 {
-    $verdad = true;
-    if ($verdad === true) {
-        
-    }
 
-    $datosMatricula = ListarMatriculasModel($Cedula);
+    $datosMatricula = ListarMatriculasModel($_SESSION["sesionCedula"]);
 
     if($datosMatricula -> num_rows > 0)
     {
@@ -21,11 +19,13 @@ function CargarMatriculasController()
             echo "<tr>";
             echo "<td>" . $resultado["nombreCurso"] . "</td>";
             echo "<td>" . $resultado["modalidad"] . "</td>";
-            echo "<td>" . $resultado["horario"] . "</td>";
-            echo '<td> <a class="btnPresionarAcciones"  href="EditarCursos.php?q=' . $resultado["idMatricula"] . '">Editar</a></td>';             
+            echo "<td>" . $resultado["horario"] . "</td>";           
             echo "</tr>";
         }
     }
 }
+
+
+
 
 ?>

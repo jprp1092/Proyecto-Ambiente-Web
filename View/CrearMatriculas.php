@@ -71,7 +71,7 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
                 </div>
 
                 <div class="col-md-3 margin-bottom-15">
-                    <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregar" name="btnAgregar">
+                    <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregarMatri" name="btnAgregar">
                     <a href="Usuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                 </div>
 

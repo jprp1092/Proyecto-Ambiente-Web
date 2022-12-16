@@ -54,7 +54,7 @@ include_once __DIR__ . '\..\Controller\MatriculaController.php';
                                         <th>Curso</th>
                                         <th>Modalidad</th>
                                         <th>Horario</th>
-                                        <th>Acciones</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
