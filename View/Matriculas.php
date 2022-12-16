@@ -22,6 +22,11 @@ include_once __DIR__ . '\..\Controller\MatriculaController.php';
         CargarMenu();
         ?>
 
+
+
+</script>
+
+
     <div class="content">
         <div class="templatemo-panels">
             <br>

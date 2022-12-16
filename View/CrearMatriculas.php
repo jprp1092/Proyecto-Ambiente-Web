@@ -6,6 +6,7 @@ if (session_status() == PHP_SESSION_NONE)
 include_once __DIR__ . '\generales.php';
 include_once __DIR__ . '\..\Controller\PantallasController.php';
 include_once __DIR__ . '\..\Controller\CursosController.php';
+include_once __DIR__ . '\..\Controller\MatriculaController.php';
 include_once __DIR__ . '\..\Controller\UsuariosController.php';
 
 ?>
@@ -38,8 +39,8 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-3">
-                <label for="lblProfesor" class="control-label">Seleccione la materia</label>
-                    <select class="form-control" id="cboProfesor" name="cboProfesor" required>
+                <label for="cboCurso" class="control-label">Seleccione la materia</label>
+                    <select class="form-control" id="cboCurso" name="cboCurso" required>
                                 <?php 
                                 ListarNombreMateriaController($datos["nombreCurso"]); 
                                 ?>
@@ -71,7 +72,7 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
                 </div>
 
                 <div class="col-md-3 margin-bottom-15">
-                    <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregarMatri" name="btnAgregar">
+                    <input type="submit" class="btn btn-info" value="Agregar" id="btnAgregarMatri" name="btnAgregarMatri">
                     <a href="Usuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                 </div>
 
@@ -81,5 +82,9 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
         </form>
     </div>
 </body>
+
+<?php 
+        footerSite();
+    ?>
 
 </html>

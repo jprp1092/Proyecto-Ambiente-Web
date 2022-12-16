@@ -25,7 +25,18 @@ function CargarMatriculasController()
     }
 }
 
+if(isset($_POST["btnAgregarMatri"]))
+{ 
+    $id = $_SESSION["sesionCedula"];
+    $Materia = $_POST["cboCurso"];
+    $Horario = $_POST["cboHorario"];
+    $Modalidad = $_POST["cboModalidad"];
 
+    
+        Matricular($id,$Materia,$Horario,$Modalidad);
+        header("Location: Matriculas.php");
+    
+}
 
 
 ?>
