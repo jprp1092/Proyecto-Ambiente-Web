@@ -60,7 +60,7 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                                         <th>Nombre Curso</th>
                                         <th>Modalidad</th>
                                         <th>Horario</th>
-                                        <th>Creditos</th>
+                                        <th>Créditos</th>
                                         <th>Profesor Asignado</th>
                                         <th>Acciones</th>
                                     </tr>

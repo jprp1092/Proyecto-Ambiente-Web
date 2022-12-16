@@ -90,7 +90,7 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
                 </div>
 
                 <div class="col-md-3">
-                    <label for="lblCorreo" class="control-label">Correo eléctronico</label>
+                    <label for="lblCorreo" class="control-label">Correo electrónico</label>
                     <input type="email" class="form-control" id="txtEmail" name="txtEmail">
                 </div>
             </div>

@@ -65,7 +65,7 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-3">
-                    <label for="lblCreditos" class="control-label">Numero de creditos</label>
+                    <label for="lblCreditos" class="control-label">Número de créditos</label>
                     <input type="text" class="form-control" id="txtCreditos" name="txtCreditos">
                 </div>
 
