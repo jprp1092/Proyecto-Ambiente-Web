@@ -7,7 +7,8 @@ include_once __DIR__ . '\Controller\UsuariosController.php';
 <html>
 
 <head>
-    <title>Título</title>
+    <title>Iniciar Sesión</title>
+    <link rel="icon" href="logo.png">
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta charset="UTF-8">

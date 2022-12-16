@@ -3,6 +3,7 @@
   function headerLogin()
   {
     echo '<title>Sistema Academico</title>
+          <link rel="icon" href="logo.png">
           <meta name="keywords" content="" />
           <meta name="description" content="" />
           <meta charset="UTF-8">
@@ -18,6 +19,7 @@
   function headerSite()
   {
     echo '<title>Sistema Academico</title>
+          <link rel="icon" href="logo.png">
           <meta name="keywords" content="" />
           <meta name="description" content="" />
           <meta charset="UTF-8">
