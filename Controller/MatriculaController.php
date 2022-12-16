@@ -5,6 +5,7 @@ if (session_status() == PHP_SESSION_NONE)
 
 include_once __DIR__ . '\..\Model\MatriculaModel.php';
 include_once __DIR__ . '\..\Controller\UsuariosController.php';
+include_once __DIR__ . '\UtilitariosController.php';
 
 function CargarMatriculasController()
 {
@@ -26,13 +27,14 @@ function CargarMatriculasController()
 
 if(isset($_POST["btnAgregarMatri"]))
 { 
+    $Correo = $_SESSION["sessionCorreo"];
     $id = $_SESSION["sesionCedula"];
     $Materia = $_POST["cboCurso"];
     $Horario = $_POST["cboHorario"];
     $Modalidad = $_POST["cboModalidad"];
 
-    
     Matricular($id,$Materia,$Horario,$Modalidad);
+    EnviarCorreo($Correo, 'Confirmación de matricula', 'Su matricula de la materia ' . $Materia . ' fue exitosa' );
     header("Location: Matriculas.php");
     
 }

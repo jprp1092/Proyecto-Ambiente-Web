@@ -18,6 +18,7 @@ if(isset($_POST["btnIngresar"]))
         $_SESSION["sesionCedula"] = $resultado["cedula"];
         $_SESSION["sessionNombre"] = $resultado["nombre"] . " " . $resultado["apellido"];
         $_SESSION["sessionTipoRol"] = $resultado["tipoRol"];
+        $_SESSION["sessionCorreo"] = $resultado["correo"];
         header("Location: View\home.php");
     }
 
