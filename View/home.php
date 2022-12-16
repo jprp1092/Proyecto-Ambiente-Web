@@ -50,7 +50,7 @@ include_once __DIR__ . '\..\Controller\PantallasController.php';
             <div class="box">
                 <a class="homeIcon"><i class="fa fa-lightbulb"></i></a>
                 <h3>Desempeño</h3>
-                <p>Ayuda a los profesores y estudintes a tener un mejor desempeño.</p>
+                <p>Ayuda a los profesores y estudiantes a tener un mejor desempeño.</p>
             </div>
         </div>
     </div>
