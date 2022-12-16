@@ -1,13 +1,23 @@
 <?php
 
-function AgregarMatriculamodal($CedulaProfesor,$CedulaEstudiante,$NombreCurso,$Modalidad)
+function AgregarMatriculamodal($CedulaEstudiante,$NombreCurso,$Modalidad)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "call AgregarMatricula('$CedulaProfesor','$CedulaEstudiante','$NombreCurso','$Modalidad','$Horario');";
+    $procedimiento = "call AgregarMatricula('$CedulaEstudiante','$NombreCurso','$Modalidad','$Horario');";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);
+}
+
+function ListarMatriculasModel($Cedula)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL ListarMatriculas($Cedula);";
+    $datosMatricula = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosMatricula;
 }
 
 ?>

@@ -9,7 +9,6 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
 
 $datos = consultarCursoId($_GET["q"]);
 
-
 ?>
 
 <!DOCTYPE html>

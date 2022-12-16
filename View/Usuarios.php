@@ -21,9 +21,6 @@ include_once __DIR__ . '\..\Controller\UsuariosController.php';
     CargarMenu();
     ?>
 
-    
- 
-
     <div class="content">
         <div class="templatemo-panels">
 

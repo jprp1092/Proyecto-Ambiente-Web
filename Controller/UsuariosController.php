@@ -11,7 +11,7 @@ if(isset($_POST["btnIngresar"]))
     $contrasena = $_POST["txtPass"];
 
     $datosUsuario = ValidarUsuario($correo, $contrasena);
-
+    
     if($datosUsuario -> num_rows > 0)
     {
         $resultado = mysqli_fetch_array($datosUsuario);

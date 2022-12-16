@@ -68,12 +68,7 @@
             </div>
           </div>
         </div>';
-        
-
   }
-
-
-
 
   function footerSite()
   {
