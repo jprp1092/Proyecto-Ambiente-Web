@@ -19,7 +19,7 @@ function CargarCursos()
             echo "<td>" . $resultado["horario"] . "</td>";
             echo "<td>" . $resultado["creditos"] . "</td>";
             echo "<td>" . $resultado["nombreProfesor"] . '  ' . $resultado["apellidoProfesor"] . "</td>";
-            echo '<td> <a class="btnPresionar"  href="EditarCursos.php?q=' . $resultado["idCurso"] . '">Editar</a></td>';             
+            echo '<td> <a class="btnPresionarAcciones"  href="EditarCursos.php?q=' . $resultado["idCurso"] . '">Editar</a></td>';             
             echo "</tr>";
         }
     }

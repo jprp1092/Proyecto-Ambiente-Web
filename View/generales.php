@@ -50,66 +50,25 @@
 
   function modal()
   {
-    /*
+   
+    include_once __DIR__ . '\..\Controller\UtilitariosController.php';
+
     echo '<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-                <h4 class="modal-title" id="myModalLabel"></h4>¿Está seguro que quiere cerrar sesión?</h4>
+                <h4 style="color:black" class="modal-title" id="myModalLabel"></h4>¿Está seguro que quiere cerrar sesión?</h4>
               </div>
               <div class="modal-footer">
-                <a href="" class="btn btn-primary">Sí</a>
-                <button type="button" class="btn btn-default" data-dismi  ss="modal">No</button>
+                <form action="" method="post">
+                  <input  type="submit" value="Sí" id="btnCerrar" name="btnCerrar" class="btn btn-primary">
+                </form>
               </div>
             </div>
           </div>
-        </div>';  */
+        </div>';
         
-        
-        echo '<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>';
-  }
-
-  function modalCursos(){
-
-
-
-  echo   ' <div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">Título del modal</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <p>El texto del cuerpo modal va aquí.</p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Guardar cambios</button>
-        </div>
-        </div>
-    </div>
-    </div> ';
-
 
   }
 

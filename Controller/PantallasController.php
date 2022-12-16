@@ -17,6 +17,7 @@ function CargarMenu()
         '<section class="sideBar">
         <div class="logo">
              <img src="images/logo.png" width="120px">
+
         </div>
         
         <br>
@@ -45,18 +46,11 @@ function CargarMenu()
             </li>';
         }
         
-        echo
-           '<li>
-                <i class="fa fa-sign-out"></i>
-               
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Launch demo modal
-              </button> 
-                
-                
-                
-                
-            </li>
+        echo 
+           '        
+           <li>
+           <i class="fa fa-sign-out"></i>
+           <a href="" data-toggle="modal" data-target="#confirmModal" data-keyboard="false"><i></i>Cerrar Sesión</a></li>
            </ul>
           </div>
         </section>';
