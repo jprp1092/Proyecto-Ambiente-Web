@@ -11,41 +11,45 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
 
 <!DOCTYPE html>
 
-<head>
-    <?php
-    headerSite();
-    ?>
-</head>
+    <head>
+        <?php
+        headerSite();
+        ?>
+    </head>
 
-<body>
+    <body>
+        
+        <?php
+        CargarMenu();
+        ?>
 
-    <?php
-    CargarMenu();
-    ?>
-
-
+    
 
     <div class="content">
         <div class="templatemo-panels">
-            <br>
-            <hr>
-            <h2>Cursos</h2>
-            <hr>
-            <br>
+        <br>
+        <hr>
+        <h2>Cursos</h2>
+        <hr>
+        <br>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <a href="CrearCurso.php" style="float: right;" class="btnPresionar">Agregar</a>
-                            </div>
+        <div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-3">
+				<div class="card">
+					<div class="card-body">
+                     <a href="CrearCurso.php" style="float: right;" class="btnPresionar">Agregar</a> 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container" style="margin-top: 40px">
+        </div>             
+    
 
+                
+                        
+            <div class="container" style="margin-top: 40px">
+        
                 <div class="row">
                     <div class="row">
                         <div class="col-md-12">
@@ -64,47 +68,28 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                                 <tbody>
 
                                     <?php
-                                    CargarCursos();
+                                        CargarCursos();
                                     ?>
 
                                 </tbody>
                             </table>
 
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
-
             </div>
-        </div>
-    </div>
+        </body>
 
-    <div class="modal fade" id="DeleteCursoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-                    <h4 class="modal-title" id="myModalLabel"></h4>¿Está seguro que quiere eliminar el curso?</h4>
-                </div>
-                <div class="modal-footer">
-
-                    <input type="hidden" id="IdUsuario" name="IdUsuario" value="" />
-                    <input type="button" class="btn btn-primary" value="SI" id="btnInactivar" name="btnInactivar" onclick="EliminarCurso()">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/usuarios.js"></script>';
-
-</body>
-
-<?php
-footerSite();
-?>
-
-<?php
-modal();
-?>
+            <?php 
+            footerSite();
+            ?>
+          
+    <?php 
+        modal();
+    ?>
 
 
 </html>

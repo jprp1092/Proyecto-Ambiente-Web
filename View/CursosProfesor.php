@@ -22,13 +22,11 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
     ?>
 
     <div class="content">
-
-         <br>
-        <hr>
-        <h2>Cursos asignados</h2>
-        <hr>
-        <br>
         <div class="templatemo-panels">
+
+        <br>
+        <h2> Cursos asignados</h2>
+            
             <div class="container" style="margin-top: 40px">
             
                 <div class="row">
@@ -41,15 +39,12 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
                                         <th>Nombre Curso</th>
                                         <th>Modalidad</th>
                                         <th>Horario</th>
-                                        <th>creditos</th>
                         
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php
-                                    CargarCursosPorDocente();
-                                ?>
-                           
+
+                                  
 
                                 </tbody>
                             </table>
@@ -62,11 +57,6 @@ include_once __DIR__ . '\..\Controller\CursosController.php';
         </div>
     </div>
 </body>
-
-
-<?php
-    modal();
-    ?>
 
 <?php 
         footerSite();

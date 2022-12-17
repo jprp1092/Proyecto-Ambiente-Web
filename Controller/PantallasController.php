@@ -6,6 +6,14 @@ if (session_status() == PHP_SESSION_NONE)
 include_once __DIR__ . '\..\Model\PantallasModel.php';
 include_once __DIR__ . '\UtilitariosController.php';
 
+
+
+function mostrarBienvenida(){
+    echo 
+        '<div class="title">
+          <h2>¡Bienvenido al sistema academico ', $_SESSION["sessionNombre"], '!</h2>
+        </div>';
+} 
 function CargarMenu()
 {
     $datosMenu = ConsultarMenu($_SESSION["sessionTipoRol"]);
@@ -55,11 +63,4 @@ function CargarMenu()
           </div>
         </section>';
     }
-}
-
-function mostrarBienvenida(){
-    echo 
-        '<div class="title">
-          <h2>¡Bienvenido al sistema academico ', $_SESSION["sessionNombre"], '!</h2>
-        </div>';
 }
