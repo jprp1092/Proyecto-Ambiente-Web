@@ -21,6 +21,17 @@ function ListarProfesoresModel() {
     return $datos;
 }
 
+
+function ListarCursosDocenteModel($Cedula)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL ListarCursosDocente('$Cedula');";
+    $datosCursos = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosCursos;
+}
+
 function ListarNombreCursoModel() {
     $enlace = OpenDB();
 

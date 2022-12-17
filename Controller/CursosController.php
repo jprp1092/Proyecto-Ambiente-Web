@@ -4,6 +4,7 @@ if (session_status() == PHP_SESSION_NONE)
     session_start();
 
 include_once __DIR__ . '\..\Model\CursosModel.php';
+include_once __DIR__ . '\..\Controller\UsuariosController.php';
 
 function CargarCursos()
 {
@@ -24,6 +25,23 @@ function CargarCursos()
         }
     }
 }
+
+function CargarCursosPorDocente()
+{
+    $datosCursos = ListarCursosDocenteModel($_SESSION["sesionCedula"]);
+
+    if($datosCursos -> num_rows > 0)
+    {
+        while($resultado = mysqli_fetch_array($datosCursos))
+        
+            echo "<tr>";
+            echo "<td>" . $resultado["nombreCurso"] . "</td>";
+            echo "<td>" . $resultado["modalidad"] . "</td>";
+            echo "<td>" . $resultado["horario"] . "</td>";
+            echo "</tr>";
+        }
+    }
+
 
 function ListarProfesoresController($CedulaUsuario) {
     

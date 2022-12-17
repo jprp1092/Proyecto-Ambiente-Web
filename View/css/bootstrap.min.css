@@ -10,6 +10,19 @@ html {
     -ms-text-size-adjust: 100%
 }
 
+.modal-header {
+
+    color: black;
+
+}
+
+span {
+    color: #00395C;;
+    font-size:150%;
+}
+
+
+
 body {
     margin: 0
 }
